@@ -14,6 +14,8 @@ $app = JFactory::getApplication();
 $canEdit = $this->item->params->get('access-edit');
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
+
+include 'templates/newsletter/template_includes.php' ;
 ?>
 
 <!-- Leading -->
@@ -32,17 +34,20 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
         }
 
         if (isset($img_src)) : ?>
-          <img src="<?= htmlspecialchars($img_src); ?>" alt="<?= htmlspecialchars($img_alt); ?>" width="418"/>
+          <img <?= $cssImg ?> src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>" alt="<?= htmlspecialchars($img_alt); ?>" width="418"/>
         <?php endif; ?>
 
       </td>
     </tr>
     <tr>
-      <td><?= $this->item->title; ?></td>
+      <td colspan="2"><?= $cssFontTitle ?><?= $this->item->title; ?><?= $cssFontTitleEnd ?></td>
     </tr>
     <tr>
-      <td><?= $this->item->introtext; ?></td>
+      <td><?= $cssFont ?><?= strip_tags($this->item->introtext, '<a>'); ?><?= $cssFontEnd ?></td>
       <td width="10"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="10"></td>
     </tr>
   </tbody>
 </table> <!-- /leading -->

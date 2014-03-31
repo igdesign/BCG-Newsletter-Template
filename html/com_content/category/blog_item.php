@@ -14,10 +14,13 @@ $app = JFactory::getApplication();
 $canEdit = $this->item->params->get('access-edit');
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
+
+include 'templates/newsletter/template_includes.php' ;
+
 ?>
 
 <!-- Leading -->
-<table class="leading" width="418" cellpadding="0" cellspacing="1" border="0">
+<table class="leading" width="418" cellpadding="0" cellspacing="0" border="0">
   <tbody>
     <tr>
       <td rowspan="2" valign="top">
@@ -31,16 +34,19 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
           $img_alt = $images->image_fulltext_alt;
         }
         ?>
-        <img src="<?= htmlspecialchars($img_src); ?>" alt="<?= htmlspecialchars($img_alt); ?>" width="128"/>
+        <img <?= $cssImg ?> src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>" alt="<?= htmlspecialchars($img_alt); ?>" width="128"/>
       </td>
-      <td rowspan="2" width="10"></td>
-      <th align="left">
-        <?= $this->item->title; ?>
+      <td width="10" rowspan="2"></td>
+      <th align="left" colspan="2">
+        <?= $cssFontTitle ?><?= $this->item->title; ?><?= $cssFontTitleEnd ?>
       </th>
-      <td rowspan="2" width="10"></td>
+      <td width="10" rowspan="2"></td>
     </tr>
     <tr>
-      <td><?= $this->item->introtext; ?></td>
+      <td><?= $cssFont ?><?= strip_tags($this->item->introtext, '<a>'); ?><?= $cssFontEnd ?></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="10"></td>
     </tr>
   </tbody>
 </table> <!-- /leading -->

@@ -81,5 +81,5 @@ foreach($configuration as $zone_name=>$config) {
 ?>
 
 <a href="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/ck.php?n=<?php echo $n; ?>" target="_blank"><!--
-	 --><img src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>" border="0" width="728" height="90" /><!--
+	 --><img src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>" border="0"  /><!--
 --></a>
