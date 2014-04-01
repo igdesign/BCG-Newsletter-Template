@@ -20,7 +20,7 @@ include 'templates/newsletter/template_includes.php' ;
 ?>
 
 <!-- Leading -->
-<table class="leading" width="418" cellpadding="0" cellspacing="0" border="0">
+<table class="leading" cellpadding="0" cellspacing="0" border="0">
   <tbody>
     <tr>
       <td rowspan="2" valign="top">

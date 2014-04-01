@@ -16,11 +16,11 @@ switch ($item->type) {
 	case 'url':
 	case 'component':
 	case 'heading':
-		require JModuleHelper::getLayoutPath('mod_menu', 'default_'.$item->type);
+		require JModuleHelper::getLayoutPath('mod_menu', 'preheader_'.$item->type);
 		break;
 
 	default:
-		require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+		require JModuleHelper::getLayoutPath('mod_menu', 'preheader_url');
 		break;
   }
 }

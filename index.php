@@ -6,117 +6,151 @@ $params = JFactory::getApplication()->getTemplate(true)->params;
 
 $doc = JFactory::getDocument();
 $template = JURI::base().'templates/'.$this->template;
-$template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
+$template = 'http://bcg.local/templates/'.$this->template;
 
-include 'template_includes.php';
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or=g/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-
-?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-
-<html lang="en-gb">
 <head>
-  <style type="text/css">
-    a img,
-    img,
-    #header a {
-      border: none;
-      text-decoration: none;
-    }
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+  <title>Test Email</title>
 
-    a {
-      color: #0054a4;
-      text-decoration: underline;
-      border: none;
-    }
-
+  <!--[if gte mso 6]>
+  <style>
+      table.mcnFollowContent {width:100% !important;}
+      table.mcnShareContent {width:100% !important;}
   </style>
+  <![endif]-->
+
+  <style type="text/css">
+    <?php include 'style.css'; ?>
+  </style>
+
 </head>
-<body <?= $cssBody ?>>
 
-	<table border="0" cellspacing="0" cellpadding="0" width="728" <?= $cssTable ?>>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e0edd5;height: 100% !important;width: 100% !important;">
+  <center>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;background-color: #e0edd5;height: 100% !important;width: 100% !important;">
+      <tr>
+        <td align="center" valign="top" id="bodyCell" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 20px;border-top: 0;height: 100% !important;width: 100% !important;">
 
 
-    <!-- HEADER -->
-    <tr>
-      <td colspan="3">
+          <!-- BEGIN TEMPLATE // -->
+          <table bgcolor="#ffffff" border="0" cellpadding="5" cellspacing="0" width="728" id="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;">
 
-        <!-- Header TABLE -->
-        <table <?= $cssHeader ?> border="0" cellpadding="0" cellspacing="0" width="728">
-              		<!-- first row -->
-              		<tr>
-        		<td rowspan="3">
-        			<img src="<?= $template.'/img/'; ?>header_01.jpg" width="179" height="171" alt=""></td>
-        		<td colspan="5" height="70">
-        			<jdoc:include type="modules" name="newsletter-header" style="clean" />
-        		</td>
-        	</tr>
-        	<tr>
-        		<td rowspan="2">
-        			<img src="<?= $template.'/img/'; ?>header_03.jpg" width="88" height="101" alt=""></td>
-        		<td>
-        			<img src="<?= $template.'/img/'; ?>header_04.jpg" width="103" height="29" alt=""></td>
-        		<td>
-        			<img src="<?= $template.'/img/'; ?>header_05.jpg" width="118" height="29" alt=""></td>
-        		<td>
-        			<img src="<?= $template.'/img/'; ?>header_06.jpg" width="94" height="29" alt=""></td>
-        		<td>
-        			<img src="<?= $template.'/img/'; ?>header_07.jpg" width="146" height="29" alt=""></td>
-        	</tr>
-        	<tr>
-        		<td colspan="4">
-        			<img src="<?= $template.'/img/'; ?>header_08.jpg" width="461" height="72" alt=""></td>
-        	</tr> <!-- /second row second row -->
-        </table> <!-- /Header Table-->
 
-      </td>
-    </tr> <!-- /HEADER -->
 
-		<!-- LEADERBOARD -->
-		<tr>
-			<td id="leaderboard" colspan="3">
-        <jdoc:include type="modules" name="newsletter-leaderboard" style="none" />
-			</td>
-		</tr> <!-- /LEADERBOARD -->
+            <!-- BEGIN PREHEADER // -->
+            <tr>
+              <td colspan="2" align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table border="0" cellpadding="0" cellspacing="0" width="728" id="templatePreheader" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;">
+                  <tr>
+                    <jdoc:include type="modules" name="newsletter-pre-header" style="none" />
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- // END PREHEADER -->
 
-		<tr><td colspan="2" height="10"></td></tr>
 
-  	<!-- menu -->
-  	<tr>
-  	  <td valign="top">
-  	    <table border="0" cellpadding="0" cellspacing="0">
-  	      <tr>
-  	        <td>
-          	  <jdoc:include type="modules" name="newsletter-content" style="none" />
-  	        </td>
-  	      </tr>
-  	      <tr>
-  	        <td height="10"></td>
-  	      </tr>
-  	      <tr>
-  	        <td>
-          	  <jdoc:include type="component" />
-  	        </td>
-  	      </tr>
-  	    </table>
-  	  </td>
-  	  <td width="10" ></td>
-  	  <td width="300" valign="top" colspan="2">
-  	  	<table id="ads" cellpadding="0" cellspacing="0" border="0" width="300" >
-  	    	<jdoc:include type="modules" name="newsletter-advertisements" style="none" />
-  	  	</table>
-  	  </td> <!-- /ADVERTISEMENTS -->
-  	</tr> <!-- /menu -->
 
-			<!-- MENU -->
-		<tr>
-		  <td id="menu" colspan="3" >
-		    <center>
-          <jdoc:include type="modules" name="newsletter-footer" style="none" />
-        </center>
-		  </td>
-		</tr> <!-- /MENU -->
+            <!-- BEGIN HEADER // -->
+            <tr>
+              <td colspan="2" align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table border="0" cellpadding="0" cellspacing="0" width="728" id="templateHeader" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;">
+                  <!-- HEADER IMAGE -->
+                  <tr>
+                    <td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
+                      <!-- CONTENT -->
+                      <img src="<?=$template?>/img/header2.png" align="left" alt="" width="728"  style="max-width: 728px;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                      <!-- /CONTENT -->
+                    </td>
+                  </tr>
+                  <!-- /HEADER IMAGE -->
 
-	</table>
+                  <!-- LEADERBOARD -->
+                  <tr>
+                    <td class="mcnImageContent" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                      <jdoc:include type="modules" name="newsletter-leaderboard" style="none" />
+                    </td>
+                  </tr>
+                  <!-- /LEADERBOARD -->
+                </table>
+              </td>
+            </tr>
+            <!-- // END HEADER -->
+
+            <!-- CONTENT -->
+            <tr>
+
+              <!-- LEFT COLUMN -->
+              <td align="center" valign="top" class="sectionContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table border="0" width="418" cellpadding="0" cellspacing="0" id="templateBodyInner" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                  <tr>
+                    <td valign="top" class="bodyContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                      <!-- BODY MENU -->
+                      <table border="0" width="418" class="mcnCaptionTopContent" cellpadding="5" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <tr>
+                          <jdoc:include type="modules" name="newsletter-content" style="none" />
+                        </tr>
+                      </table>
+                      <!-- /BODY MENU -->
+
+                      <!-- COMPONENT -->
+                      <table border="0" width="418" cellpadding="0" cellspacing="0" class="mcnCaptionTopContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <tbody class="mcnTextBlockOuter">
+                          <tr>
+                            <td valign="top" class="mcnTextBlockInner" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              <jdoc:include type="component" />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- /COMPONENT -->
+
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <!-- /LEFT COLUMN -->
+
+
+              <!-- RIGHT COLUMN -->
+              <td align="center" valign="top" width="300" class="sectionContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateSidebarInner" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-left: 0;">
+                  <tr>
+                    <td valign="top" class="sidebarContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                      <jdoc:include type="modules" name="newsletter-advertisements" style="none" />
+
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+            <!-- // END CONTENT -->
+
+
+            <tr>
+              <td colspan="2" align="center" class="mcnImageContent" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                <!-- BEGIN FOOTER // -->
+
+
+                            <jdoc:include type="modules" name="newsletter-footer" style="none" />
+
+
+              </td>
+            </tr>
+          </table>
+          <!-- // END TEMPLATE -->
+        </td>
+      </tr>
+    </table>
+  </center>
 </body>
 </html>

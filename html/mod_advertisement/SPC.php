@@ -83,13 +83,19 @@ foreach($configuration as $zone_name=>$config) {
       $src  = 'http://'.$serverURL.'/'.$deliveryPath.'/avw.php?bannerid='.trim($bannerid).'&amp;cb='.$n;
 
 			$ads_ready[] =
-				'<tr>
-				  <td colspan="3">
-				    <a href="'.$href.'" target="_blank"><!--
-				 	 --><img src="'.$src.'" border="0" width="300" height="250" /><!--
-				 --></a>
-				  </td>
-				</tr>';
+				 '<!-- ADVERTISEMENT -->
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <tbody class="mcnImageBlockOuter">
+              <tr>
+                <td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
+                  <a href="'.$href.'" target="_blank">
+                    <img align="left" alt="" src="'.$src.'" width="300" style="max-width: 300px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /ADVERTISEMENT -->';
 			break;
 
 		case 'e':
@@ -99,13 +105,19 @@ foreach($configuration as $zone_name=>$config) {
       $src  = 'http://'.$serverURL.'/'.$deliveryPath.'/avw.php?bannerid='.trim($bannerid).'&amp;cb='.$n;
 
 			$ads_ready[] =
-				'<tr>
-				  <td colspan="3">
-				    <a href="'.$href.'" target="_blank"><!--
-				 	 --><img src="'.$src.'" border="0" width="300" height="50" /><!--
-				 --></a>
-				  </td>
-				</tr>';
+				 '<!-- ADVERTISEMENT -->
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <tbody class="mcnImageBlockOuter">
+              <tr>
+                <td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
+                  <a href="'.$href.'" target="_blank">
+                    <img align="left" alt="" src="'.$src.'" width="300" style="max-width: 300px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /ADVERTISEMENT -->';
 			break;
 
 		case 'd':
@@ -116,18 +128,24 @@ foreach($configuration as $zone_name=>$config) {
       $src2  = 'http://'.$serverURL.'/'.$deliveryPath.'/avw.php?bannerid='.trim($config->id2).'&amp;cb='.$n;
 
 			$ads_ready[] =
-				'<tr>
-					<td align="left" >
-					  <a href="'.$href1.'" target="_blank"><!--
-				 	--><img src="'.$src1.'" border="0" width="140" height="280" /><!--
-				 --></a>
-				 	</td>
-				 	<td align="right">
-				 	  <a href="'.$href2.'" target="_blank"><!--
-				 	 --><img src="'.$src2.'" border="0" width="140" height="280" /><!--
-				 --></a>
-				 	</td>
-				 </tr>';
+				'<!-- /ADVERTISEMENT -->
+				 <table border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+          <tr>
+            <td valign="top" width="150" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" >
+              <a href="'.$href1.'" target="_blank">
+                <img alt="" src="'.$src1.'" width="140" style="max-width: 140px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
+                      class="mcnImage">
+              </a>
+            </td>
+            <td align="right" width="150" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+              <a href="'.$href2.'" target="_blank">
+                <img alt="" src="'.$src2.'" width="140" style="max-width: 140px; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+              </a>
+            </td>
+          </tr>
+        </table>
+        <!-- /ADVERTISEMENT -->';
 			break;
 
 		default:
@@ -136,5 +154,4 @@ foreach($configuration as $zone_name=>$config) {
 	}
 }
 
-echo implode('<tr><td colspan="2" height="10"></td></tr>', $ads_ready);
-
+echo implode('<table><tr><td height="10"></td></tr></table>', $ads_ready);

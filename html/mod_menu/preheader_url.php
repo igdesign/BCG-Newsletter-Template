@@ -26,12 +26,12 @@ $flink = $item->flink;
 $flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
 
 
-$style = 'style="font-family: Arial;font-size: 12px; text-decoration-line: none; font-weight: normal; line-height: 100%; text-align: center; word-wrap: break-word; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;color:#ffffff;"';
+$style = 'style="font-family: Arial;font-size: 12px; text-decoration-line: none; font-weight: normal; line-height: 100%; text-align: center; word-wrap: break-word; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;color: #0054a4;"';
 ?>
 
 
 
-<td bgcolor="#5d9732" width="1%" align="center" valign="middle" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnShareContentItemContainer">
+<td width="1%" align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnShareContentItemContainer">
 
 <?php
 switch ($item->browserNav) :

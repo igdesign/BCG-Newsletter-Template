@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" class="n">
+
+<head>
+  <title>Campaign Builder - Template Designer | MailChimp</title>
+  <meta charset="utf-8">
+  <meta name="copyright" content="Copyright (c) 2014 MailChimp. All Rights Reserved.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="/release/9.0.132/css/less/mcd.css">
+  <link rel="stylesheet" type="text/css" href="/release/9.0.132/css/less/theone.css">
+  <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-iphone.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-ipad.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-iphone4.png">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/release/9.0.132/js/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="/release/9.0.132/js/codemirror/theme/mc-codemirror.css">
+
+
+</head>
+
+<body class="mcd builder  neapolitan">
+
+  <div class="notify-bubble">
+
+    <div class="line">
+      <div tabindex="0" class="notify-header full-width">
+        <h3 class="nomargin">Notifications</h3>
+      </div>
+      <ul class="notifications-all" id="notifications">
+        <li>
+          <div class="no-notifications alignc">
+            <div class="freddicon nocomments"></div>
+            <p class="fwb">No notifications</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+  </div>
+  <div class="wizard-container  ">
+    <div id="av-neapolitan-content">
+      <div id="av-flash-block"></div>
+      <div id="main" class="hide-lt-ie8">
+        <div id="editor">
+          <div class="column split-left" id="previewcol"> <span class="drag-split" title="Click and drag to resize the columns"><span class="freddicon vellip"></span></span>
+            <div class="colbody haslist">
+              <div class="iframe-wrapper loading">
+                <div class="iframe-loading-message design">
+                  <div class="loadingbar alignc">
+                    <img src="/release/9.0.132/css/icons/pulse.png" class="pulse mar-lv2">
+                    <br><strong>Please wait, loading...</strong>
+                  </div>
+                </div>
+                <div class="iframe-dnd-overlay"></div>
+                <iframe id="preview-template" src="/campaigns/wizard/neapolitan/preview?id=1324829" frameborder="0" onload="loadPreview();"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="column split-right" id="toolcol">
+            <div class="colheader builder-bar">
+              <ul id="tool-nav" class="button-nav fill-width">
+                <li><a id="content-link" href="#" class="button-small active">Content</a>
+                </li>
+                <li><a id="design-link" href="#" class="button-small">Design</a>
+                </li>
+                <li><a id="feedback-link" href="#" class="button-small overflow-visible">Comments <span class="count badge p0" id="comments-unread-count" style="display:none;"></span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="colbody">
+              <div id="toolcol-panes" data-dojo-type="dijit/layout/StackContainer">
+                <div id="content-pane" data-dojo-type="dijit/layout/ContentPane" title="Content" selected="true">
+                  <ul id="blocks-container"></ul>
+                  <div id="start-tour-link" style="display: none" class="clear pad-lv3 alignc small-meta">Need a refresher? <a href="#" class="startTour">Take a quick tour</a>.</div>
+                </div>
+                <div id="design-pane" data-dojo-type="dijit/layout/ContentPane" title="Design" selected="false">
+                  <div id="design-editor"></div>
+                </div>
+                <div id="feedback-pane" data-dojo-type="dijit/layout/ContentPane" title="Comments" selected="false">
+                  <div id="feedback-editor" data-dojo-type="mojo/neapolitan/FeedbackPane" data-dojo-props="feedbackUrl: '/campaigns/feedback', campaignId: '1324829'"></div>
+                </div>
+              </div>
+            </div>
+            <div id="editor-pane" data-dojo-type="mojo/neapolitan/EditorPane"></div>
+            <div class="drawer-tab"></div>
+          </div>
+        </div>
+        <div id="hotkey-help-pane" class="rounded4"> <a class="float-right" href="#" onclick="dojo.setStyle('hotkey-help-pane', 'display', 'none'); return false;" title="Close"><span class="freddicon cross"></span></a>
+          <h4>Keyboard shortcuts</h4>
+          <ul class="section">
+            <li><code>ESC</code> Save and close editor, hide preview</li>
+            <li><code>1</code> Toggle preview mode</li>
+            <li><code>2</code> Send a test email</li>
+            <li><code>3</code> Push to MailChimp Mobile</li>
+            <li><code>H</code> Show/Hide hotkeys cheatsheet</li>
+          </ul>
+          <h4>Text editor shortcuts</h4>
+          <ul>
+            <li><code><span class="os-key">CTRL</span> + <strong>Z</strong></code> Undo</li>
+            <li><code><span class="os-key">CTRL</span> + <strong>Y</strong></code> Redo</li>
+            <li><code><span class="os-key">CTRL</span> + <strong>L</strong></code> Add Link</li>
+            <li><code><span class="os-key">CTRL</span> + <strong>B</strong></code>  <b>Bold</b> selected text</li>
+            <li><code><span class="os-key">CTRL</span> + <strong>U</strong></code>  <span style="text-decoration:underline;">Underline</span> selected text</li>
+            <li><code><span class="os-key">CTRL</span> + <strong>I</strong></code>  <i>Italicize</i> selected text</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:24px;">
+        <div class="lastUnit size1of1 section browser-warning lt-ie8" style="display:none;">
+          <div class="feedback-block warning">
+            <div class="unit size1of1">
+              <div class="media">
+                <div class="media-image"> <span class="freddicon warning"></span>
+                </div>
+                <div class="media-body">
+                  <h4>MailChimp is not actively supported in Internet Explorer 8 and below.</h4>
+                  <p>MailChimp works best on modern browsers. The latest versions of <a href="http://www.google.com/chrome/" target="_blank">Google Chrome</a>, <a href="http://www.getfirefox.com/" target="_blank">Firefox</a>, Safari and Internet Explorer all
+                    play nice with the Chimp. We recommend switching to one of those.</p>
+                  <p>See our <a href="http://kb.mailchimp.com/article/what-are-the-system-requirements-for-using-mailchimp?t=1396366662&v=221&enc=a7caa450841d078db8512216e80cd3ac38479d029896820569df90083e228ab8" target="_blank">system requirements</a> for
+                    more information.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:none;">
+        <div id="edit-content-modal" data-dojo-type="dijit/Dialog" style="width:95%; height: 450px;" title="Edit Your Content" data-dojo-props="autofocus:false">
+          <div class="save-block pad-lv1 pad-lr0 float-right"> <span id="content-txt-savemsg" class="pad-lv3 pad-tb0 small-meta">We'll autosave every 20 seconds</span>
+            <button class="button p0 disabled mar-r0" id="content-saving-btn" style="display:none;">Saving...</button>
+            <button data-dojo-type="dijit/form/Button" class="button p0 mar-r0" id="content-save-btn">Save &amp; Close
+
+            </button>
+          </div>
+          <div id="fckeditor-block" style="clear: both;"></div>
+
+          <div class="merge-cheatsheet">
+            <label class="merge-tag-cheatsheet disclosure-closed">Merge tag cheatsheet for list <span class="list-name">Test List</span>
+            </label>
+            <div id="merges-list" class="merges" style="display: none;">
+              <table class="mc-table scroll-small">
+                <thead>
+                  <tr class="odd">
+                    <th>To insert...</th>
+                    <th class="persistent">Use this *|MERGETAG|*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td>Email Address</td>
+                    <td id="mergetag-0">*|EMAIL|*</td>
+                  </tr>
+                  <tr class="even">
+                    <td>First Name</td>
+                    <td id="mergetag-1">*|FNAME|*</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Last Name</td>
+                    <td id="mergetag-2">*|LNAME|*</td>
+                  </tr>
+                  <tr id="start-builtin-merges" class="builtin-merge odd">
+                    <td>Unsubscribe Link</td>
+                    <td id="mergetag-unsub">*|UNSUB|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Forward to a Friend Link</td>
+                    <td id="mergetag-forward">*|FORWARD|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>Update Profile Link</td>
+                    <td id="mergetag-profile">*|UPDATE_PROFILE|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Archive Link</td>
+                    <td id="mergetag-profile">*|ARCHIVE|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>MonkeyRewards Affiliate Link</td>
+                    <td id="mergetag-rewards">*|REWARDS|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Facebook Like Button</td>
+                    <td id="mergetag-rewards">*|FACEBOOK:LIKE|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>Facebook Comments Button</td>
+                    <td id="mergetag-rewards">*|FACEBOOK:COMMENTS|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Facebook Profile + 5 Most Recent Wall Posts</td>
+                    <td id="mergetag-rewards">*|FACEBOOK:FULLPROFILE|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>Facebook Profile</td>
+                    <td id="mergetag-rewards">*|FACEBOOK:PROFILE|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Facebook Posts</td>
+                    <td id="mergetag-rewards">*|FACEBOOK:POSTS3|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>Twitter Profile + 5 Most Recent Tweets</td>
+                    <td id="mergetag-rewards">*|TWITTER:FULLPROFILE|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Twitter Profile</td>
+                    <td id="mergetag-rewards">*|TWITTER:PROFILE|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>Twitter Tweets</td>
+                    <td id="mergetag-rewards">*|TWITTER:TWEETS3|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Send a Tweet</td>
+                    <td id="mergetag-rewards">*|TWITTER:TWEET|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>Social Share Links</td>
+                    <td id="mergetag-rewards">*|MC:SHARE|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Send to Google +1</td>
+                    <td id="mergetag-rewards">*|GOOGLE:PLUSONE|*</td>
+                  </tr>
+                  <tr class="builtin-merge odd">
+                    <td>Share on Tumblr</td>
+                    <td id="mergetag-rewards">*|TUMBLR:SHARE|*</td>
+                  </tr>
+                  <tr class="builtin-merge even">
+                    <td>Show Local Deals <a href="#" class="button-small p3" title="turn off popup blocking to view" onclick="var url = '/deals/groupon-divisions';setTimeout( function(){ var win = window.open(url, '_blank', 'toolbar=0,scrollbars=1,location=0,status=1,menubar=0,resizable=1,width=700,height=700');mojo.utils.checkPopupWin(win);}, 0 ); return false;">location options</a>
+                    </td>
+                    <td id="mergetag-rewards">*|LOCAL:DEALS|*</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="file-manager-modal" data-dojo-type="dijit/Dialog" title="File Manager" execute="saveTemplateImage(arguments[0]);" ondownloadend="imageDialogInit();" oncancel="imageDialogClose();"></div>
+        <div id="edit-content-disabled" data-dojo-type="dijit/Dialog" title="Content Editing Disabled">
+          <div class="pad-lv1">
+            <p>This is a preview of a the template edit area. Editing content here is disabled. Content editing will be available when editing a real campaign using this template.</p>
+          </div>
+        </div>
+        <div id="link-modal" class="link-modal" data-dojo-type="dijit/Dialog" title="Insert/Edit Link" execute="saveLinkToCK()" ondownloadend="linkDialogInit();" onhide="linkDialogClose();"></div>
+        <div id="edit-imagetext-modal" style="width:95%; max-width:800px; height: 400px;" data-dojo-type="dijit/Dialog" title="Edit Your Content" execute="saveTemplateImageText(arguments[0]);">
+          <div class="save-block pad-lv1 pad-lr0 float-right"> <span id="content-imgtxt-savemsg" class="pad-lv3 pad-tb0 small-meta">We'll autosave every 20 seconds</span>
+            <button data-dojo-type="dijit/form/Button" type="submit" class="button p0 mar-r0">Save &amp; Close</button>
+          </div>
+          <div id="fckeditor-image-block" style="clear: both;"></div>
+        </div>
+      </div>
+
+
+      <div id="welcome-neapolitan-classic" data-dojo-type="dijit/Dialog" title="Welcome To The New Editor" style="display:none; width:760px;" onshow="window.welcomeNeapolitanClassicSetup();">
+        <div class="neapolitan-classic-onboarding-dialog">
+          <div class="steps-container">
+            <div class="float-right">
+              <button class="button mar-r0 back-button" title="Previous step"><span class="freddicon laquo mar-lr0"></span>
+              </button>
+              <button class="button mar-r0 p0 next-button active" title="Next step"><span class="freddicon raquo mar-lr0"></span>
+              </button>
+              <button class="button mar-r0 p0 finish-button" title="Last step. Finish tour." onclick="dijit.byId('welcome-neapolitan-classic').hide(); return false;">Ok, got it</button>
+            </div>
+            <div id="classic-step1" class="step step1 pad-lv1 pad-lr0 active"> <span class="below24"><span class="fwb">Step 1/3:</span> Edit text and see your changes in real-time.</span>
+              <div class="image-wrapper simpleFadeIn">
+                <img alt="You can edit your campaign's content and see changes as you type." class="block mar-lv3 mar-lr0 mar-b0" src="/release/9.0.132/images/neapolitan_classic_onboard_step1.png">
+              </div>
+            </div>
+            <div id="classic-step2" class="step step2 pad-lv1 pad-lr0"> <span class="below24"><span class="fwb">Step 2/3:</span> Change your email's design from the sidebar.</span>
+              <div class="image-wrapper">
+                <img alt="The sidebar is used to change the design of your campaign. You can preview the changes immediately." class="block mar-lv3 mar-lr0 mar-b0" src="/release/9.0.132/images/neapolitan_classic_onboard_step2.png">
+              </div>
+            </div>
+            <div id="classic-step3" class="step step3 pad-lv1 pad-lr0"> <span class="below24"><span class="fwb">Step 3:</span> Get feedback on your work in the Comments tab.</span>
+              <div class="image-wrapper">
+                <img alt="Comments are a great way to get feedback on your campaign. People can reply to your test emails with feedback, and they'll show up in the Comments tab." class="block mar-lv3 mar-lr0 mar-b0" src="/release/9.0.132/images/neapolitan_classic_onboard_step3.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="send-test-modal" data-dojo-type="dijit/Dialog" title="Send a Test" style="display:none; width:600px;">
+        <div id="send-test-form">
+          <label for="test-email">Send a test to</label>
+          <div class="field-wrapper">
+            <input type="email" id="test-email" name="test-email" tabindex="1" value="jerrou@telus.net" placeholder="Ex: freddie@mailchimp.com, mannie@mandrill.com..." class="av-email"> <span class="field-help always-show">Comma separate emails to send to multiple accounts</span>
+          </div>
+          <label for="top-bar">Include instructions and a personal message <span class="small-meta">(optional)</span>
+          </label>
+          <textarea type="text" id="test-message" class="below12" name="test-message" tabindex="1" placeholder="Ex: Hi folks. Please make sure you are OK with the header image. Thanks!"></textarea>
+
+          <div class="save-cancel-group pad-lv3 pad-lr0 pad-b0">
+            <input type="button" class="button p0 send-test-button" value="Send Test" onclick="mojo.app.wizard.sendTest(); return false;" tabindex="2">
+            <a onclick="dijit.byId('send-test-modal').hide(); return false;" href="#" tabindex="4">Cancel</a>
+          </div>
+        </div>
+        <div id="send-test-success" style="display: none;">
+          <div class="feedback-block success section">
+            <div class="unit size1of1">
+              <div class="media">
+                <div class="media-image"> <span class="freddicon success"></span>
+                </div>
+                <div class="media-body">
+                  <h4>Bon voyage, test email!</h4>
+                  <p>Your test email is on its way to the test recipients. <a onclick="_gaq.push(['_trackEvent', document.title, 'help link', 'list of things you might check']);" href="http://mailchimp.com/kb/article/email-campaign-testing-tips" target="_blank">email testing tips</a>
+                  </p>
+                  <p class="small-meta"><strong>P.S.</strong> Recipients can reply to your test emails. Their feedback will show up in the comments tab.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="send-test-samedomain" class="feedback-block warning section" style="display: none;">
+            <div class="unit size1of1">
+              <div class="media">
+                <div class="media-body  ">
+                  <p> <strong>Heads up!</strong> When you send to an email address using the same domain in the reply-to (insidegolf.ca), it can sometimes trigger Gmail and others to categorize it as spam. Check your junk mail if the test doesn't arrive in
+                    your inbox.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button onclick="dijit.byId('send-test-modal').hide(); return false;" class="button p0 finish-tests">Ok</button> <a href="#" onclick="dojo.byId('send-test-success').style.display='none';dojo.byId('send-test-samedomain').style.display='none';dojo.byId('send-test-form').style.display='';dojo.byId('test-email').focus();return false;">Send another test email</a>
+        </div>
+      </div>
+      <div id="inspection-dialog" data-dojo-type="dijit/Dialog" title="Run Inbox Inspection" style="display:none; width: 700px">
+        <div class="inbox-inspection-modal">
+          <div>
+            <div class="lastUnit size1of1">
+              <h4 class="above0">We've automatically selected your subscribers' favorite ten email clients.</h4>
+              <p class="below0">Depending on how fast ISPs get back to us, your <strong>inbox inspection may take anywhere from ten minutes to a couple hours to process.</strong>
+              </p>
+              <div class="section">
+                <label for="pick-clients" class="inline-label">
+                  <input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="pick-clients" name="pick-clients" onclick="mojo.utils.wipeToggle(this, 'client-manual');" class="av-checkbox">manual client selection</label>
+              </div>
+            </div>
+            <div id="client-manual" class="line" style="display:none;">
+              <div class="unit size1of1">
+                <p>Choose <strong>up to 10 email clients and/or spam filters</strong> for your inspection.
+                  <br> <a href="http://litmus.com/resources/email-client-stats" target="_blank">view most popular email clients at Litmus.com</a>  <span> | <a href="/lists/dashboard/overview?id=659650#email-clients" target="_blank">view email client usage for this campaign's list</a></span>
+                </p>
+              </div>
+              <div class="unit size1of2">
+                <fieldset>
+                  <legend>Email clients</legend>
+                  <div id="clients-checkbox-group" class="checkbox-group stat-block">
+                    <h5>Mac OS</h5>
+                    <div class="unit size1of1">
+                      <label for="appmail5">
+                        <input id="appmail5" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="appmail5" onclick="return updateClients(this);">Apple Mail 5</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="appmail6">
+                        <input id="appmail6" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="appmail6" onclick="return updateClients(this);">Apple Mail 6</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ol2011">
+                        <input id="ol2011" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ol2011" onclick="return updateClients(this);">Outlook 2011</label>
+                    </div>
+                    <h5>Mobile devices</h5>
+                    <div class="unit size1of1">
+                      <label for="androidgmailapp">
+                        <input id="androidgmailapp" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="androidgmailapp" checked="checked" onclick="return updateClients(this);">Gmail App (Android)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="iphonegmailnew">
+                        <input id="iphonegmailnew" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="iphonegmailnew" checked="checked" onclick="return updateClients(this);">Gmail (iPhone)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="android22">
+                        <input id="android22" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="android22" onclick="return updateClients(this);">Android 2.3</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="android4">
+                        <input id="android4" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="android4" onclick="return updateClients(this);">Android 4.0</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="blackberry8900">
+                        <input id="blackberry8900" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="blackberry8900" onclick="return updateClients(this);">BlackBerry 4 OS</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="blackberryhtml">
+                        <input id="blackberryhtml" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="blackberryhtml" onclick="return updateClients(this);">BlackBerry 5 OS</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="iphone5s">
+                        <input id="iphone5s" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="iphone5s" onclick="return updateClients(this);">iPhone 5s</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ipad">
+                        <input id="ipad" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ipad" onclick="return updateClients(this);">iPad (Retina)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ipadmini">
+                        <input id="ipadmini" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ipadmini" onclick="return updateClients(this);">iPad Mini</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="iphone4">
+                        <input id="iphone4" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="iphone4" onclick="return updateClients(this);">iPhone 4s</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="iphone5">
+                        <input id="iphone5" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="iphone5" onclick="return updateClients(this);">iPhone 5</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="iphoneoutlookcom">
+                        <input id="iphoneoutlookcom" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="iphoneoutlookcom" onclick="return updateClients(this);">Outlook.com (iPhone)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="symbians60">
+                        <input id="symbians60" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="symbians60" onclick="return updateClients(this);">Symbian</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="windowsphone8">
+                        <input id="windowsphone8" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="windowsphone8" onclick="return updateClients(this);">Windows Phone 8</label>
+                    </div>
+                    <h5>Web-based</h5>
+                    <div class="unit size1of1">
+                      <label for="gmailnew">
+                        <input id="gmailnew" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="gmailnew" checked="checked" onclick="return updateClients(this);">Gmail (Explorer)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ffgmailnew">
+                        <input id="ffgmailnew" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ffgmailnew" checked="checked" onclick="return updateClients(this);">Gmail (Firefox)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="yahoo">
+                        <input id="yahoo" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="yahoo" checked="checked" onclick="return updateClients(this);">Yahoo! Mail (Explorer)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ffyahoo">
+                        <input id="ffyahoo" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ffyahoo" checked="checked" onclick="return updateClients(this);">Yahoo! Mail (Firefox)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="chromeyahoo">
+                        <input id="chromeyahoo" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="chromeyahoo" checked="checked" onclick="return updateClients(this);">Yahoo! Mail (Chrome)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="aolonline">
+                        <input id="aolonline" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="aolonline" onclick="return updateClients(this);">AOL Mail (Explorer)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ffaolonline">
+                        <input id="ffaolonline" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ffaolonline" onclick="return updateClients(this);">AOL Mail (Firefox)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="chromeaolonline">
+                        <input id="chromeaolonline" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="chromeaolonline" onclick="return updateClients(this);">AOL Mail (Chrome)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="chromegmailnew">
+                        <input id="chromegmailnew" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="chromegmailnew" onclick="return updateClients(this);">Gmail (Chrome)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="outlookcom">
+                        <input id="outlookcom" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="outlookcom" onclick="return updateClients(this);">Outlook.com (Explorer)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ffoutlookcom">
+                        <input id="ffoutlookcom" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ffoutlookcom" onclick="return updateClients(this);">Outlook.com (Firefox)</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="chromeoutlookcom">
+                        <input id="chromeoutlookcom" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="chromeoutlookcom" onclick="return updateClients(this);">Outlook.com (Chrome)</label>
+                    </div>
+                    <h5>Windows</h5>
+                    <div class="unit size1of1">
+                      <label for="ol2002">
+                        <input id="ol2002" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ol2002" checked="checked" onclick="return updateClients(this);">Outlook 2002</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ol2003">
+                        <input id="ol2003" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ol2003" checked="checked" onclick="return updateClients(this);">Outlook 2003</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ol2007">
+                        <input id="ol2007" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ol2007" checked="checked" onclick="return updateClients(this);">Outlook 2007</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="colorblind">
+                        <input id="colorblind" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="colorblind" onclick="return updateClients(this);">Color Blindness</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="notes6">
+                        <input id="notes6" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="notes6" onclick="return updateClients(this);">Lotus Notes 6.5</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="notes7">
+                        <input id="notes7" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="notes7" onclick="return updateClients(this);">Lotus Notes 7</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="notes8">
+                        <input id="notes8" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="notes8" onclick="return updateClients(this);">Lotus Notes 8</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="notes85">
+                        <input id="notes85" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="notes85" onclick="return updateClients(this);">Lotus Notes 8.5</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ol2000">
+                        <input id="ol2000" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ol2000" onclick="return updateClients(this);">Outlook 2000</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ol2010">
+                        <input id="ol2010" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ol2010" onclick="return updateClients(this);">Outlook 2010</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="ol2013">
+                        <input id="ol2013" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="ol2013" onclick="return updateClients(this);">Outlook 2013</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="plaintext">
+                        <input id="plaintext" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="plaintext" onclick="return updateClients(this);">Plain Text</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="thunderbird3">
+                        <input id="thunderbird3" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="thunderbird3" onclick="return updateClients(this);">Thunderbird 3.0</label>
+                    </div>
+                    <div class="unit size1of1">
+                      <label for="thunderbirdlatest">
+                        <input id="thunderbirdlatest" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="thunderbirdlatest" onclick="return updateClients(this);">Thunderbird latest</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="lastUnit size1of2">
+                <fieldset>
+                  <legend>Spam filters</legend>
+                  <div id="spam-checkbox-group" class="checkbox-group stat-block">
+                    <div class="line">
+                      <label for="outlookfilter">
+                        <input id="outlookfilter" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="outlookfilter" onclick="return updateClients(this);">Outlook</label>
+                    </div>
+                    <div class="line">
+                      <label for="gmailnewspam">
+                        <input id="gmailnewspam" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="gmailnewspam" onclick="return updateClients(this);">Gmail</label>
+                    </div>
+                    <div class="line">
+                      <label for="yahoospam">
+                        <input id="yahoospam" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="yahoospam" onclick="return updateClients(this);">Yahoo! Mail</label>
+                    </div>
+                    <div class="line">
+                      <label for="aolonlinespam">
+                        <input id="aolonlinespam" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="aolonlinespam" onclick="return updateClients(this);">AOL Mail</label>
+                    </div>
+                    <div class="line">
+                      <label for="gmxspam">
+                        <input id="gmxspam" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="gmxspam" onclick="return updateClients(this);">GMX</label>
+                    </div>
+                    <div class="line">
+                      <label for="mailcomspam">
+                        <input id="mailcomspam" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="mailcomspam" onclick="return updateClients(this);">Mail.com</label>
+                    </div>
+                    <div class="line">
+                      <label for="messagelabs">
+                        <input id="messagelabs" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="messagelabs" onclick="return updateClients(this);">MessageLabs</label>
+                    </div>
+                    <div class="line">
+                      <label for="postini">
+                        <input id="postini" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="postini" onclick="return updateClients(this);">Postini</label>
+                    </div>
+                    <div class="line">
+                      <label for="barracuda">
+                        <input id="barracuda" type="checkbox" data-dojo-type="dijit/form/CheckBox" class="inspection-client-checkbox av-checkbox" value="barracuda" onclick="return updateClients(this);">Barracuda</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="save-cancel-group lastUnit size1of1 section">
+              <button class="button p0" data-dojo-type="dijit/form/Button" type="submit" onclick="makeInspection();">Run Inbox Inspection</button> <a herf="#" onclick="dijit.byId('inspection-dialog').hide(); return false;">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="push-mobile-dialog" data-dojo-type="dijit/Dialog" title="Push to MailChimp Mobile" style="display:none; width: 600px">
+        <div class="unit above-below15 lastUnit">
+          <p>Preview your campaigns on your mobile device with the MailChimp mobile app. Just install either (or both) of the MailChimp mobile apps and select "Push to MailChimp Mobile" again to get an instant preview.</p>
+          <ul class="linear-list line section">
+            <li class="pad-lv1">
+              <a target="_blank" title="Download for iPhone on the App Store" href="http://itunes.apple.com/us/app/mailchimp/id366794783">
+                <img alt="Available on the iPhone App Store" height="52" src="/release/9.0.132/images/icons/mobile-dl-iphone.png">
+              </a>
+            </li>
+            <li class="pad-lv1">
+              <a target="_blank" title="Download for Android on Google Play" href="https://play.google.com/store/apps/details?id=com.mailchimp.mailchimp">
+                <img alt="Available for Android on Google Play" height="52" src="/release/9.0.132/images/icons/mobile-dl-android.png">
+              </a>
+            </li>
+          </ul>
+          <p class="small-meta">Note: If you've previously installed the app and see this, please upgrade it for preview support.</p>
+        </div>
+      </div>
+      <div id="save-template-modal" data-dojo-type="dijit/Dialog" title="Save as Template" refreshonshow="true" href="/campaigns/wizard/html-template/save-dialog?id=1324829" execute="saveTemplate(arguments[0]);"></div>
+      <div id="save-template-complete" data-dojo-type="dijit/Dialog" title="Template Saved" execute="this.hide();">
+        <p>Your template has been saved, and will appear under "Saved Templates" whenever you create a new campaign.</p>
+        <button data-dojo-type="dijit/form/Button" class="button p0" type="submit">Return to Campaign</button>
+      </div>
+      <div id="edit-contactinfo-modal" data-dojo-type="dijit/Dialog" title="Edit List Contact Information" href="/lists/settings/contact-popup?id=659650" style="width:80%; height:600px;"></div>
+      <div data-dojo-type="dijit/Dialog" id="comment-delete-dialog" title="Confirm Deletion" style="width:40%">
+        <h4>Are you sure you want to delete this comment?</h4>
+        <p class="warning">Deleting this comment will delete the entire conversation.</p>
+        <div class="save-cancel-group above-below15">
+          <button data-dojo-type="dijit/form/Button" type="submit" class="button p0">Delete</button> <a href="#" onclick="dijit.byId('comment-delete-dialog').hide(); return false;">Cancel</a>
+        </div>
+      </div>
+      <a id="focusHack" href="#"></a>
+    </div>
+    <form class="wizard-form" id="wizard-form" action="/campaigns/wizard/html-template-post" data-mojo-challenge="false" method="POST" novalidate="novalidate">
+      <input type="hidden" id="post-save-redir" name="post-save-redir" value="" class="av-hidden">
+      <input type="hidden" name="id" class="av-hidden" value="1324829" id="id">
+
+      <div class="wizard-top-container  ">
+        <a href="/" aria-label="Dashboard" class="wizard-logo float-left"></a>
+        <div id="exitnav" class="exitnav float-right">
+          <div class="mobile-top-nav"><span class="freddicon daquo alignc"></span>
+          </div>
+          <ul class="linear-list vbars">
+            <li> <a href="#" onclick="dojo.fx.wipeIn({'node': 'wizard-help'}).play(); return false;">Help</a>
+            </li>
+            <li>
+              <ul class="hover-list float-right">
+                <li><a href="#" onclick="return false;">Preview and Test</a>
+                  <ul class="right-edge" style="width:245px;">
+                    <li><a href="#" id="showPreview"><span class="small-meta small-code float-right">1</span> Enter Preview Mode</a>
+                    </li>
+                    <li><a onclick="globalPublish('mojo/editor/toggleTestPopup');return false;" href="#"><span class="small-meta small-code float-right">2</span> Send a Test Email</a>
+                    </li>
+                    <li><a href="#" onclick="dijit.byId('push-mobile-dialog').show(); return false;"><span class="small-meta small-code float-right">3</span> Push to MailChimp Mobile</a>
+                    </li>
+                    <li><a href="#" onclick="dijit.byId('inspection-dialog').show(); return false;">Run Inbox Inspection</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li> <a href="#" onclick="dijit.byId('save-template-modal').show(); return false;">Save as Template</a>
+            </li>
+            <li>
+              <ul id="wizard-exit" class="hover-list float-left">
+                <li><a href="#" onclick="return false;">Save and Exit</a>
+                  <ul class="right-edge auto-width">
+                    <li><a href="/">Dashboard</a>
+                    </li>
+                    <li><a href="/campaigns">Campaigns</a>
+                    </li>
+                    <li><a href="/lists/">Lists</a>
+                    </li>
+                    <li><a href="/reports/">Reports</a>
+                    </li>
+                    <li><a href="/autoresponders/">Autoresponders</a>
+                    </li>
+                    <li><a href="/account/">Account</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="/login/out" title="Adios, insidegolf"><span class="icon16 icon-logout_16">Log Out</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wizard-title" id="wizard-title">
+          <div id="builder-header" class="builder-bar get-started"> <span title="Basic - Right Sidebar">BCG Test #2</span>  <a href="#" title="Find out what changed and apply the newness." style="display:none;" id="update-available-link" class="vbar">Update available for this template</a>  <span id="viewer-list"></span>
+          </div>
+        </div>
+      </div>
+      <div id="av-outer-container">
+        <div id="preview-test" class="preview-container" style="display:none;">
+          <div class="wizard-top-container">
+            <a href="/" aria-label="Dashboard" class="wizard-logo float-left"></a>
+            <div class="exitnav float-right">
+              <div class="mobile-top-nav"><span class="freddicon daquo alignc"></span>
+              </div>
+              <ul class="linear-list vbars">
+                <li> <a href="#" onclick="dojo.toggleClass('desktop-view', 'show-headers'); return false;">View Header Info</a>
+                </li>
+                <li>
+                  <ul class="hover-list float-right">
+                    <li><a href="#" onclick="return false;">Preview and Test</a>
+                      <ul class="right-edge" style="width:245px;">
+                        <li><a href="#" onclick="window.hidePreviewMode(); return false;"><span class="small-meta small-code float-right">1</span> Exit Preview Mode</a>
+                        </li>
+                        <li><a onclick="globalPublish('mojo/editor/toggleTestPopup');return false;" href="#"><span class="small-meta small-code float-right">2</span> Send a Test Email</a>
+                        </li>
+                        <li><a href="#" onclick="dijit.byId('push-mobile-dialog').show(); return false;"><span class="small-meta small-code float-right">3</span> Push to MailChimp Mobile</a>
+                        </li>
+                        <li><a href="#" onclick="dijit.byId('inspection-dialog').show(); return false;">Run Inbox Inspection</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li> <a href="#" onclick="window.hidePreviewMode(); return false;"><span class="freddicon cross-thick float-right"></span><span class="show-mobile">Exit Preview Mode</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="wizard-title">
+              <div class="builder-bar get-started"> <span>BCG Test #2</span>  <span class="badge">Preview Mode</span>
+              </div>
+            </div>
+          </div>
+          <div class="preview-content">
+            <div id="desktop-view" class="viewcol split-left">
+              <div id="header-info" class="no-split">
+                <div id="headers-detail" class="selfclear">
+                  <table id="email-headers" class="mc-table scroll-small">
+                    <tbody>
+                      <tr id="email-to" class="odd">
+                        <th width="95">To:</th>
+                        <td>*|FNAME|* &lt; recipient email address &gt;</td>
+                      </tr>
+                      <tr id="email-fromname" class="even">
+                        <th>From:</th>
+                        <td>design</td>
+                      </tr>
+                      <tr id="email-fromemail" class="odd">
+                        <th>Reply-to:</th>
+                        <td>design@insidegolf.ca</td>
+                      </tr>
+                      <tr id="email-subject" class="even">
+                        <th>Subject:</th>
+                        <td>Test Email</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="above-below15 alignr" id="header-merge">
+                  <div id="merge-label">
+                    <button id="merge-start" onclick="fillMerge(0); return false;" class="button-small p3 mar-r0">view live merge info</button>
+                  </div>
+                  <button id="merge-back" onclick="fillMerge(merge_pos-1); return false;" class="button-small mar-r0" style="display: none;"><span class="freddicon laquo"></span>
+                  </button>
+                  <button id="merge-next" onclick="fillMerge(merge_pos+1); return false;" class="button-small mar-r0" style="display: none;"><span class="freddicon raquo"></span>
+                  </button>
+                  <div id="member-label" class="hide"></div>
+                </div>
+              </div>
+              <div class="desktop-view-inner no-split"> <span class="drag-split" title="Click and drag to resize the columns"><span class="freddicon vellip"></span></span>
+                <div class="iframe-wrapper">
+                  <div class="iframe-loading-message">
+                    <div class="loadingbar alignc">
+                      <img src="/release/9.0.132/css/icons/pulse.png" class="pulse mar-lv2">
+                      <br><strong>Please wait, loading...</strong>
+                    </div>
+                  </div>
+                  <iframe id="preview-content" class="preview-frame" style="width: 100%;" src=""></iframe>
+                </div>
+              </div>
+              <div class="preview-footer builder-bar small-meta alignc"> <span>We'll automatically add <a href="#" onclick="dijit.byId('edit-contactinfo-modal').show(); return false;">your contact info</a> into the email footer. <div data-dojo-type="dijit/form/DropDownButton" class="help help-tip"><div><span class="freddicon info-heavy"></span><span>learn more</span>
+              </div>
+              <div data-dojo-type="dijit/TooltipDialog" id="helptip-1" title="learn more" class="help-tip-dialog" style="display:none;"><a href="#" onclick="dijit.byId('helptip-1').onCancel(); return false;" class="dialog-close"><span class="freddicon cross-thick"></span></a>
+                <ul class="help-tip-lines selfclear">
+                  <li>Contact information is required in all campaigns</li>
+                  <li>to comply with the <a onclick="_gaq.push(['_trackEvent', document.title, 'help link', 'CAN-SPAM ACT']);" href="http://kb.mailchimp.com/article/what-is-required-to-meet-your-terms-of-use-and-the-can-spam-act?t=1396366662&v=207&enc=0751a825750c1857003f979aaac0a5fa5f11f99d0549ddbd28bc96d0a19dc67d"
+                    target="_blank">CAN-SPAM Act</a> and <a onclick="_gaq.push(['_trackEvent', document.title, 'help link', 'international spam law']);" href="http://kb.mailchimp.com/article/what-is-required-to-meet-your-terms-of-use-and-the-can-spam-act?t=1396366662&v=231&enc=0bf80bc6cbd85c6138d488975c3e01793ed9c7546f76912ba47df6294868af2d"
+                    target="_blank">international spam law</a>.</li>
+                  <li><a href="http://kb.mailchimp.com/article/how-do-i-change-my-campaign-contact-information/?t=1396366662&v=235&enc=79e8a4811d84caad8e029240788eff2e41a6dc0100629a9b081411c0fc009a7d" target="_blank" class="detailed-info">Read more &rarr;</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </span>
+          </div>
+        </div>
+        <div id="mobile-preview" class="mobile-view viewcol split-right">
+          <div class="showmobile">
+            <div class="phonewrap">
+              <div class="bananaphone">
+                <div class="iframe-wrapper">
+                  <div class="iframe-loading-message mobile">
+                    <div class="loadingbar alignc">
+                      <img src="/release/9.0.132/css/icons/pulse.png" class="pulse mar-lv2">
+                      <br><strong>Please wait, loading...</strong>
+                    </div>
+                  </div>
+                  <iframe id="mobile-preview-content" class="preview-frame" src=""></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="preview-footer builder-bar small-meta alignc"> <a href="#" onclick="toggleOrientation(event);"><span class="icon16 icon-undo_16">Rotate</span></a> &bull; <em>This is an <a class="nowrap" href="http://kb.mailchimp.com/article/why-does-the-mobile-preview-look-different-than-it-does-on-my-device?t=1396366662&v=284&enc=bbcbea1c09f73383d4eb265292a8d87b6d7757a340ed39ddaed8994fbe4065cd" target="_blank">approximation</a></em>
+            </div>
+          </div>
+          <div class="hidemobile pad-lv3">
+            <div class="error"> <strong>Mobile Preview Not Available</strong>
+              <br>This column would normally show how your campaign would look on mobile phones. Unfortunately, the browser you're using does not support media queries. To see a mobile preview, upgrade your browser and return to this page. <span>If you have an iPhone or Android Phone, you could also try <a href="#" onclick="dijit.byId('push-mobile-dialog').show(); return false;">Push to MailChimp Mobile</a>.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+
+  <div id="formContent">
+    <input type="hidden" id="reactivate" name="reactivate" value="" class="av-hidden">
+  </div>
+
+  <div class="goToNextStepContainer ">
+    <a class="back-button hide-desktop" title="Go back to Template" href="#" onclick="if(!dojo.hasClass(this.parentNode, 'current')){dojo.byId('next-step').value='template';if(typeof(editAreaLoader) != 'undefined'){ editAreaLoader.delete_instance('html'); }if(typeof(wizard_formsubmit) != 'undefined') { wizard_formsubmit(); } else { dojo.byId('wizard-form').submit();} } return false;"><span class="freddicon laquo"></span><span class=" nowrap">Back</span><span class="step-details nowrap">:&nbsp;Template</span>
+    </a>
+    <a class="back-button hide-mobile" title="Go back to Template" border="0" href="#" onclick="if(!dojo.hasClass(this.parentNode, 'current')){dojo.byId('next-step').value='template';if(typeof(editAreaLoader) != 'undefined'){ editAreaLoader.delete_instance('html'); }if(typeof(wizard_formsubmit) != 'undefined') { wizard_formsubmit(); } else { dojo.byId('wizard-form').submit();} } return false;"><span class="freddicon laquo"></span>Back</a> <a title="Go to next step: Confirm campaign details then send it" class="next-button hide-desktop" onclick="mojo.app.wizard.goToNextStep(this); return false;">Next step: Confirm <span class="freddicon raquo on-right"></span></a>
+    <a
+    title="Go to next step: Confirm campaign details then send it" class="next-button hide-mobile" onclick="mojo.app.wizard.goToNextStep(this); return false;">Next <span class="freddicon raquo on-right"></span>
+      </a>
+      <div class="final-action-container next-button"></div>
+      <div class="hide-mobile" id="progress">
+        <ul id="progress-bar" class="steps-5">
+          <li class="step step1  "> <a id="step1" class="" href="#" onclick="if(!dojo.hasClass(this.parentNode, 'current')){dojo.byId('next-step').value='recipients';if(typeof(editAreaLoader) != 'undefined'){ editAreaLoader.delete_instance('html'); }if(typeof(wizard_formsubmit) != 'undefined') { wizard_formsubmit(); } else { dojo.byId('wizard-form').submit();} } return false;">Recipients</a>
+          </li>
+          <li class="step step2  "> <a id="step2" class="" href="#" onclick="if(!dojo.hasClass(this.parentNode, 'current')){dojo.byId('next-step').value='setup';if(typeof(editAreaLoader) != 'undefined'){ editAreaLoader.delete_instance('html'); }if(typeof(wizard_formsubmit) != 'undefined') { wizard_formsubmit(); } else { dojo.byId('wizard-form').submit();} } return false;">Setup</a>
+          </li>
+          <li class="step step3  "> <a id="step3" class="" href="#" onclick="if(!dojo.hasClass(this.parentNode, 'current')){dojo.byId('next-step').value='template';if(typeof(editAreaLoader) != 'undefined'){ editAreaLoader.delete_instance('html'); }if(typeof(wizard_formsubmit) != 'undefined') { wizard_formsubmit(); } else { dojo.byId('wizard-form').submit();} } return false;">Template</a>
+          </li>
+          <li class="step step4 current "> <a id="step4" class="" href="#" onclick="if(!dojo.hasClass(this.parentNode, 'current')){dojo.byId('next-step').value='html';if(typeof(editAreaLoader) != 'undefined'){ editAreaLoader.delete_instance('html'); }if(typeof(wizard_formsubmit) != 'undefined') { wizard_formsubmit(); } else { dojo.byId('wizard-form').submit();} } return false;">Design</a>
+          </li>
+          <li class="step step5  last"> <a id="step5" class="disabled" href="#" onclick="if(!dojo.hasClass(this.parentNode, 'current')){dojo.byId('next-step').value='confirm';if(typeof(editAreaLoader) != 'undefined'){ editAreaLoader.delete_instance('html'); }if(typeof(wizard_formsubmit) != 'undefined') { wizard_formsubmit(); } else { dojo.byId('wizard-form').submit();} } return false;">Confirm</a>
+          </li>
+        </ul>
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'step1',position:['above']" label="Select a list or create a segment to receive the campaign"></div>
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'step2',position:['above']" label="Name your campaign and set preferences"></div>
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'step3',position:['above']" label="Select a template for your campaign"></div>
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'step4',position:['above']" label="Create your email and add your content"></div>
+        <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'step5',position:['above']" label="Confirm campaign details then send it"></div>
+      </div>
+  </div>
+  <input type="hidden" name="__csrf_token" value="332491d6e05699a6ab37fdf9b13a6d84bcdae614" class="av-hidden" id="__csrf_token">
+  <input type="hidden" name="next-step" id="next-step">
+  </form>
+
+
+  </div>
+  <div id="wizard-help" style="display:none;">
+    <div class="line help">
+      <h2 class="lastUnit size1of1">Have a question?</h2>
+      <div class="unit size1of2 maintain-width">
+        <form action="http://kb.mailchimp.com/search/results?t=1396366662&v=267&enc=cd00ae3911b03079b1ead29560fe20129611f9510f83230dd540a261893fe87a" method="post" id="kb-bodysearch" target="_blank" class="form-inline with-button section" novalidate="novalidate">
+          <div class="field-wrapper">
+            <input id="kb-search" name="kb-search" type="search" placeholder="Search the Knowledge Base 24/7" title="Search the Knowledge Base 24/7" class="icon av-search">
+            <button id="kb-search-button" type="submit" name="kb-search-button" title="Search" class="icon button-large"><span class="freddicon search nomargin"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="lastUnit size1of2 section"> <a href="http://kb.mailchimp.com/?t=1396366662&v=276&enc=1765bc508d92e4dacd4488649ed90cc7c53a62d75b7b91493dff553459e85567" class="search-kb button-large" target="_blank">Contact Support</a>
+      </div>
+      <div class="lastUnit size1of1 footer small-meta">
+        &copy; 2001&ndash;2014 MailChimp. All Rights Reserved. &bull;
+        <a href="http://mailchimp.com/legal/terms" target="_blank">Terms of Use</a> &bull; <a href="http://mailchimp.com/legal/privacy" target="_blank">Privacy Policy</a> &bull; <a href="http://mailchimp.com/legal/copyright" target="_blank">Copyright Policy</a>
+      </div> <a onclick="dojo.fx.wipeOut({'node': 'wizard-help'}).play();" class="closer"><span class="freddicon cross-thick"></span></a>
+    </div>
+  </div>
+
+  <div data-dojo-type="dojox/widget/Toaster" id="toast" messagetopic="show-toast" positiondirection="tl-down" duration="2000" separator="&lt;br/&gt;" style="display:none;"></div>
+  <div id="popup-win-blocked" data-dojo-type="dijit/Dialog" title="Popup Windows Are Blocked" execute="this.hide();" style="width:450px;height:250px;display:none;">
+    <div class="warning">Whoops, looks like your browser is blocking popup windows. <a href="http://kb.mailchimp.com/article/how-to-disable-pop-up-blockers-in-your-browser/?t=1396366662&v=213&enc=f10bd698ce359c33783a7efadfe3dac377004c01911aa482457a4eda42754a4d" class="info"
+      target="_blank">how to disable popup blocking</a>
+    </div>
+  </div>
+  <div class="bottom-page"></div>
+</body>
+
+</html>
