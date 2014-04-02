@@ -6,7 +6,7 @@ $params = JFactory::getApplication()->getTemplate(true)->params;
 
 $doc = JFactory::getDocument();
 $template = JURI::base().'templates/'.$this->template;
-$template = 'http://bcg.local/templates/'.$this->template;
+$template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or=g/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -83,54 +83,70 @@ $template = 'http://bcg.local/templates/'.$this->template;
 
             <!-- CONTENT -->
             <tr>
+              <td>
 
-              <!-- LEFT COLUMN -->
-              <td align="center" valign="top" class="sectionContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                <table border="0" width="418" cellpadding="0" cellspacing="0" id="templateBodyInner" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <!-- LEFT COLUMN -->
+                <table border="0" width="418" cellpadding="0" cellspacing="0" align="left" class="mcnCaptionTopContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                   <tr>
-                    <td valign="top" class="bodyContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-                      <!-- BODY MENU -->
-                      <table border="0" width="418" class="mcnCaptionTopContent" cellpadding="5" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <td align="center" valign="top" class="sectionContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                      <table border="0" width="418" cellpadding="0" cellspacing="0" id="templateBodyInner" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                         <tr>
-                          <jdoc:include type="modules" name="newsletter-content" style="none" />
+                          <td valign="top" class="bodyContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                            <!-- BODY MENU -->
+                            <table border="0" width="418" class="mcnCaptionTopContent" cellpadding="5" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              <tr>
+                                <jdoc:include type="modules" name="newsletter-content" style="none" />
+                              </tr>
+                            </table>
+                            <!-- /BODY MENU -->
+
+                            <!-- COMPONENT -->
+                            <table border="0" width="418" cellpadding="0" cellspacing="0" class="mcnCaptionTopContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                              <tbody class="mcnTextBlockOuter">
+                                <tr>
+                                  <td valign="top" class="mcnTextBlockInner" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <jdoc:include type="component" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- /COMPONENT -->
+
+
+                          </td>
                         </tr>
                       </table>
-                      <!-- /BODY MENU -->
-
-                      <!-- COMPONENT -->
-                      <table border="0" width="418" cellpadding="0" cellspacing="0" class="mcnCaptionTopContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                        <tbody class="mcnTextBlockOuter">
-                          <tr>
-                            <td valign="top" class="mcnTextBlockInner" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                              <jdoc:include type="component" />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <!-- /COMPONENT -->
-
-
                     </td>
                   </tr>
                 </table>
-              </td>
-              <!-- /LEFT COLUMN -->
+                <!-- /LEFT COLUMN -->
 
 
-              <!-- RIGHT COLUMN -->
-              <td align="center" valign="top" width="300" class="sectionContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateSidebarInner" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-left: 0;">
+                <table align="left" border="0" width="10" cellpadding="0" cellspacing="0" class="mcnCaptionTopContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                  <tr><td width="10">&nbsp;</td></tr>
+                </table>
+
+                <!-- RIGHT COLUMN -->
+                <table align="left" border="0" width="300" cellpadding="0" cellspacing="0" class="mcnCaptionTopContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                   <tr>
-                    <td valign="top" class="sidebarContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
-                      <jdoc:include type="modules" name="newsletter-advertisements" style="none" />
+                   <td align="left" valign="top" width="300" class="sectionContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateSidebarInner" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-left: 0;">
+                      <tr>
+                        <td valign="top" class="sidebarContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                          <jdoc:include type="modules" name="newsletter-advertisements" style="none" />
+
+                        </td>
+                      </tr>
+                      </table>
 
                     </td>
                   </tr>
                 </table>
-
               </td>
+              <!-- /RIGHT COLUMN -->
             </tr>
             <!-- // END CONTENT -->
 

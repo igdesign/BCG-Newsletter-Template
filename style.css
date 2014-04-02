@@ -241,7 +241,9 @@ body,#bodyTable,#bodyCell{
 		table[class=mcnImageGroupContentContainer],
 		img[class=mcnImage],
 		table[class=mcnBoxedTextContentContainer],
-		table[class=mcnTextContentContainer] {
+		table[class=mcnTextContentContainer],
+		td[class=mcnTextContentContainer],
+		.leading {
 			width:100% !important;
 		}
 

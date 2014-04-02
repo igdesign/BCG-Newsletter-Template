@@ -134,13 +134,13 @@ foreach($configuration as $zone_name=>$config) {
           <tr>
             <td valign="top" width="150" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" >
               <a href="'.$href1.'" target="_blank">
-                <img alt="" src="'.$src1.'" width="140" style="max-width: 140px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
+                <img alt="" src="'.$src1.'" width="140" style="max-width: 140px;outline: none;border: 0;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
                       class="mcnImage">
               </a>
             </td>
             <td align="right" width="150" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
               <a href="'.$href2.'" target="_blank">
-                <img alt="" src="'.$src2.'" width="140" style="max-width: 140px; outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+                <img alt="" src="'.$src2.'" width="140" style="max-width: 140px; outline: none; border: 0;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
               </a>
             </td>
           </tr>
