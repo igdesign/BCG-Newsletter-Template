@@ -166,15 +166,15 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
 
                             <!-- BODY MENU -->
                             <table border="0"
-width="418"
-class="mcnCaptionTopContent"
-cellpadding="5"
-cellspacing="0"
-style="border-collapse: collapse;
-mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
+                                   width="418"
+                                   class="mcnCaptionTopContent"
+                                   cellpadding="5"
+                                   cellspacing="0"
+                                   style="border-collapse: collapse;
+                                          mso-table-lspace: 0pt;
+                                          mso-table-rspace: 0pt;
+                                          -ms-text-size-adjust: 100%;
+                                          -webkit-text-size-adjust: 100%;">
                               <tr>
                                 <jdoc:include type="modules" name="newsletter-content" style="none" />
                               </tr>
@@ -183,24 +183,28 @@ mso-table-rspace: 0pt;
 
                             <!-- COMPONENT -->
                             <table border="0"
-width="418"
-cellpadding="0"
-cellspacing="0"
-class="mcnCaptionTopContent"
-style="border-collapse: collapse;
-mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
+                                   width="418"
+                                   cellpadding="0"
+                                   cellspacing="0"
+                                   class="mcnCaptionTopContent"
+                                   style="border-collapse: collapse;
+                                          mso-table-lspace: 0pt;
+                                          mso-table-rspace: 0pt;
+                                          -ms-text-size-adjust: 100%;
+                                          -webkit-text-size-adjust: 100%;">
                               <tbody class="mcnTextBlockOuter">
                                 <tr>
                                   <td valign="top"
-class="mcnTextBlockInner"
-style="mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
+                                      class="mcnTextBlockInner"
+                                      style="mso-table-lspace: 0pt;
+                                             mso-table-rspace: 0pt;
+                                             -ms-text-size-adjust: 100%;
+                                             -webkit-text-size-adjust: 100%;">
+
+
                                     <jdoc:include type="component" />
+
+
                                   </td>
                                 </tr>
                               </tbody>
@@ -216,93 +220,93 @@ mso-table-rspace: 0pt;
                 </table>
                 <!-- /LEFT COLUMN -->
 
-
+                <!-- Spacer -->
                 <table align="left"
-border="0"
-width="10"
-cellpadding="0"
-cellspacing="0"
-class="mcnCaptionTopContent"
-style="border-collapse: collapse;
-mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
-                  <tr><td width="10">&nbsp;
-</td></tr>
+                       border="0"
+                       width="10"
+                       cellpadding="0"
+                       cellspacing="0"
+                       class="mcnCaptionTopContent"
+                       style="border-collapse: collapse;
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                             -ms-text-size-adjust: 100%;
+                           -webkit-text-size-adjust: 100%;">
+                  <tr>
+                    <td width="10">&nbsp;</td>
+                  </tr>
                 </table>
+                <!-- /SPACER -->
 
                 <!-- RIGHT COLUMN -->
                 <table align="left"
-border="0"
-width="300"
-cellpadding="0"
-cellspacing="0"
-class="mcnCaptionTopContent"
-style="border-collapse: collapse;
-mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
+                       border="0"
+                       width="300"
+                       cellpadding="0"
+                       cellspacing="0"
+                       class="mcnCaptionTopContent"
+                       style="border-collapse: collapse;
+                              mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              -ms-text-size-adjust: 100%;
+                              -webkit-text-size-adjust: 100%;">
                   <tr>
 
                    <td align="left"
-valign="top"
-width="300"
-class="sectionContainer"
-style="mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
+                       valign="top"
+                       width="300"
+                       class="sectionContainer"
+                       style="mso-table-lspace: 0pt;
+                              mso-table-rspace: 0pt;
+                              -ms-text-size-adjust: 100%;
+                              -webkit-text-size-adjust: 100%;">
                     <table border="0"
-cellpadding="0"
-cellspacing="0"
-width="100%"
-id="templateSidebarInner"
-style="border-collapse: collapse;
-mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;
-border-left: 0;">
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          id="templateSidebarInner"
+                          style="border-collapse: collapse;
+                          mso-table-lspace: 0pt;
+                          mso-table-rspace: 0pt;
+                          -ms-text-size-adjust: 100%;
+                          -webkit-text-size-adjust: 100%;
+                          border-left: 0;">
                       <tr>
                         <td valign="top"
-class="sidebarContainer"
-style="mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
+                            class="sidebarContainer"
+                            style="mso-table-lspace: 0pt;
+                                   mso-table-rspace: 0pt;
+                                   -ms-text-size-adjust: 100%;
+                                   -webkit-text-size-adjust: 100%;">
 
                           <jdoc:include type="modules" name="newsletter-advertisements" style="none" />
 
                         </td>
                       </tr>
                       </table>
-
                     </td>
                   </tr>
                 </table>
               </td>
               <!-- /RIGHT COLUMN -->
+
+
             </tr>
             <!-- // END CONTENT -->
 
-
             <tr>
               <td colspan="2"
-align="center"
-class="mcnImageContent"
-valign="top"
-style="mso-table-lspace: 0pt;
-mso-table-rspace: 0pt;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;">
+                  align="center"
+                  class="mcnImageContent"
+                  valign="top"
+                  style="mso-table-lspace: 0pt;
+                         mso-table-rspace: 0pt;
+                         -ms-text-size-adjust: 100%;
+                         -webkit-text-size-adjust: 100%;">
 
                 <!-- BEGIN FOOTER // -->
-
-
-                            <jdoc:include type="modules" name="newsletter-footer" style="none" />
-
+                <jdoc:include type="modules" name="newsletter-footer" style="none" />
+                <!-- /FOOTER -->
 
               </td>
             </tr>
