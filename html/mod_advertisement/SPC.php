@@ -45,7 +45,6 @@ $n = substr(md5(rand()),0,7);
 
 
 
-
 $configuration = $params->get('configuration', '');
 if (!$configuration) {
   return;
