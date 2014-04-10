@@ -42,8 +42,8 @@ $urlOptions = implode('&amp;', $urlOptions);
 $n = substr(md5(rand()),0,7);
 
 
-
-
+$width = $params->get('width', 300);
+$height = $params->get('height', 250);
 
 
 
@@ -61,8 +61,6 @@ $configuration = '{' . $configuration . '}';
 // make it usable
 $configuration = json_decode($configuration);
 
-?>
-<?php
 
 
 // for each config
@@ -73,15 +71,23 @@ foreach($configuration as $zone_name=>$config) {
 
   // zone id specified
   if (isset($config->banner_id)) {
-    $banner_id = $config->banner_id;
+    $banner_id = $config->banner_id; ?>
+      <a href="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/ck.php?n=<?php echo $n; ?>"
+         target="_blank"><!--
+      	 --><img src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>"
+      	         border="0"
+      	         width="<?=$width?>"
+      	         height="100%"
+      	         style="padding-bottom: 0;
+      	                display: inline !important;
+      	                vertical-align: bottom;
+      	                border: 0;
+      	                outline: none;
+      	                text-decoration: none;
+      	                -ms-interpolation-mode: bicubic;"
+                        class="mcnImage"/><!--
+      --></a>
+    <?php
   }
 
-
 }
-
-?>
-
-<a href="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/ck.php?n=<?php echo $n; ?>" target="_blank"><!--
-	 --><img src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>" border="0"  style="padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
-                      class="mcnImage"/><!--
---></a>

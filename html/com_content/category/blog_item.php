@@ -20,30 +20,43 @@ include 'templates/newsletter/template_includes.php' ;
 $this->item->introtext = str_replace('<a href="/', '<a href="' . str_replace(JURI::root(true), '', JURI::root()), $this->item->introtext);
 $this->item->introtext = str_replace('<a href="index.php?', '<a href="' . str_replace(JURI::root(true), '', JURI::root()).'index.php?', $this->item->introtext);
 
-?>
+if (isset($images->image_intro) and !empty($images->image_intro)) {
+  $img_src = $images->image_intro;
+  $img_alt = $images->image_intro_alt;
+}
+else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
+  $img_src = $images->image_fulltext;
+  $img_alt = $images->image_fulltext_alt;
+}
 
+?>
+<?php /*
 <!-- Leading -->
-<table width="418" class="mcnTextContentContainer" cellpadding="0" cellspacing="0" border="0">
+<table width="418"
+       class="mcnTextContentContainer"
+       cellpadding="0"
+       cellspacing="0"
+       border="0">
   <tbody>
     <tr>
-      <td rowspan="2" valign="top">
-        <?php
-        if (isset($images->image_intro) and !empty($images->image_intro)) {
-          $img_src = $images->image_intro;
-          $img_alt = $images->image_intro_alt;
-        }
-        else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
-          $img_src = $images->image_fulltext;
-          $img_alt = $images->image_fulltext_alt;
-        }
-        ?>
+      <td rowspan="2"
+          valign="top"
+          width="128">
         <?php if (isset($img_src)) : ?>
-           <img <?= $cssImg ?> src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>" alt="<?= htmlspecialchars($img_alt); ?>" width="128"/>
+           <img <?= $cssImg ?>
+                src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
+                alt="<?= htmlspecialchars($img_alt); ?>"
+                width="128"
+                height="77" />
         <?php endif; ?>
 
       </td>
-      <td width="5" rowspan="2"></td>
+      <td width="5"
+          rowspan="2">
+
+      </td>
     </tr>
+
     <tr>
       <td align="left">
         <?= $cssFontTitle ?><?= htmlentities($this->item->title); ?><?= $cssFontTitleEnd ?>
@@ -53,4 +66,74 @@ $this->item->introtext = str_replace('<a href="index.php?', '<a href="' . str_re
     </tr>
   </tbody>
 </table> <!-- /leading -->
-<table><tr><td height="10"></td></tr></table>
+<table>
+  <tr>
+    <td height="10"></td>
+  </tr>
+</table> */ ?>
+
+
+<table width="418"
+       class="mcnTextContentContainer"
+       cellpadding="0"
+       cellspacing="0"
+       border="0"
+       align="left" >
+    <tr>
+      <td align="left">
+
+
+          <table width="128"
+                 cellpadding="0"
+                 cellspacing="0"
+                 border="0"
+                 class="mcnTextContentContainer"
+                 align="left">
+            <tr>
+              <td >
+                <?php if (isset($img_src)) : ?>
+                   <img <?= $cssImg ?>
+                        src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
+                        alt="<?= htmlspecialchars($img_alt); ?>"
+                        width="100%"
+                        class="mcnImage" />
+                <?php endif; ?>
+
+              </td>
+            </tr>
+          </table>
+
+
+          <table width="10" height="10" align="left">
+            <tr>
+              <td align="left">
+              </td>
+            </tr>
+          </table>
+
+
+          <table width="280"
+                 cellpadding="0"
+                 cellspacing="0"
+                 border="0"
+                 class="mcnTextContentContainer">
+            <tr>
+              <td>
+                <?= $cssFontTitle ?><?= htmlentities($this->item->title); ?><?= $cssFontTitleEnd ?><br />
+                <?= $cssFont ?><?= strip_tags($this->item->introtext, '<a>'); ?><?= $cssFontEnd ?>
+
+              </td>
+            </tr>
+          </table>
+
+
+      </td>
+    </tr>
+</table>
+<table width="10" height="10" align="left">
+    <tr>
+      <td align="left">
+      </td>
+    </tr>
+  </table>
+

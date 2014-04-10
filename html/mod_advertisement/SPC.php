@@ -83,12 +83,40 @@ foreach($configuration as $zone_name=>$config) {
 
 			$ads_ready[] =
 				 '<!-- ADVERTISEMENT -->
-          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+          <table border="0"
+                 cellpadding="0"
+                 cellspacing="0"
+                 width="100%"
+                 class="mcnImageBlock"
+                 style="border-collapse: collapse;
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        -ms-text-size-adjust: 100%;
+                        -webkit-text-size-adjust: 100%;">
             <tbody class="mcnImageBlockOuter">
               <tr>
-                <td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
-                  <a href="'.$href.'" target="_blank">
-                    <img align="left" alt="" src="'.$src.'" width="300" style="max-width: 300px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                <td valign="top"
+                    class="mcnImageBlockInner"
+                    style="mso-table-lspace: 0pt;
+                           mso-table-rspace: 0pt;
+                           -ms-text-size-adjust: 100%;
+                           -webkit-text-size-adjust: 100%;">
+                  <a href="'.$href.'"
+                     target="_blank">
+                    <img align="left"
+                         alt=""
+                         src="'.$src.'"
+                         width="300"
+                         heigth="250"
+                         class="mcnImage"
+                         style="max-width: 300px;
+                                padding-bottom: 0;
+                                display: inline !important;
+                                vertical-align: bottom;
+                                border: 0;
+                                outline: none;
+                                text-decoration: none;
+                                -ms-interpolation-mode: bicubic;">
                   </a>
                 </td>
               </tr>
@@ -105,12 +133,40 @@ foreach($configuration as $zone_name=>$config) {
 
 			$ads_ready[] =
 				 '<!-- ADVERTISEMENT -->
-          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+          <table border="0"
+                 cellpadding="0"
+                 cellspacing="0"
+                 width="100%"
+                 class="mcnImageBlock"
+                 style="border-collapse: collapse;
+                        mso-table-lspace: 0pt;
+                        mso-table-rspace: 0pt;
+                        -ms-text-size-adjust: 100%;
+                        -webkit-text-size-adjust: 100%;">
             <tbody class="mcnImageBlockOuter">
               <tr>
-                <td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
-                  <a href="'.$href.'" target="_blank">
-                    <img align="left" alt="" src="'.$src.'" width="300" style="max-width: 300px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                <td valign="top"
+                    class="mcnImageBlockInner"
+                    style="mso-table-lspace: 0pt;
+                           mso-table-rspace: 0pt;
+                           -ms-text-size-adjust: 100%;
+                           -webkit-text-size-adjust: 100%;">
+                  <a href="'.$href.'"
+                     target="_blank">
+                    <img align="left"
+                         alt=""
+                         src="'.$src.'"
+                         width="300"
+                         height="50"
+                         class="mcnImage"
+                         style="max-width: 300px;
+                                padding-bottom: 0;
+                                display: inline !important;
+                                vertical-align: bottom;
+                                border: 0;
+                                outline: none;
+                                text-decoration: none;
+                                -ms-interpolation-mode: bicubic;">
                   </a>
                 </td>
               </tr>
@@ -128,18 +184,58 @@ foreach($configuration as $zone_name=>$config) {
 
 			$ads_ready[] =
 				'<!-- /ADVERTISEMENT -->
-				 <table border="0" cellpadding="0" cellspacing="0" class="mcnImageGroupBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+				 <table border="0"
+				        cellpadding="0"
+				        cellspacing="0"
+				        class="mcnImageGroupBlock"
+				        style="border-collapse: collapse;
+				               mso-table-lspace: 0pt;
+				               mso-table-rspace: 0pt;
+				               -ms-text-size-adjust: 100%;
+				               -webkit-text-size-adjust: 100%;">
 
           <tr>
-            <td valign="top" width="150" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" >
-              <a href="'.$href1.'" target="_blank">
-                <img alt="" src="'.$src1.'" width="140" style="max-width: 140px;outline: none;border: 0;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
-                      class="mcnImage">
+            <td valign="top"
+                width="150"
+                style="mso-table-lspace: 0pt;
+                       mso-table-rspace: 0pt;
+                       -ms-text-size-adjust: 100%;
+                       -webkit-text-size-adjust: 100%;">
+              <a href="'.$href1.'"
+                 target="_blank">
+                <img alt=""
+                     src="'.$src1.'"
+                     width="140"
+                     height="280"
+                     class="mcnImage"
+                     style="max-width: 140px;
+                            outline: none;
+                            border: 0;
+                            text-decoration: none;
+                            -ms-interpolation-mode: bicubic;
+                            vertical-align: bottom;">
               </a>
             </td>
-            <td align="right" width="150" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-              <a href="'.$href2.'" target="_blank">
-                <img alt="" src="'.$src2.'" width="140" style="max-width: 140px; outline: none; border: 0;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage">
+            <td align="right"
+                width="150"
+                valign="top"
+                style="mso-table-lspace: 0pt;
+                       mso-table-rspace: 0pt;
+                       -ms-text-size-adjust: 100%;
+                       -webkit-text-size-adjust: 100%;">
+              <a href="'.$href2.'"
+                 target="_blank">
+                <img alt=""
+                     src="'.$src2.'"
+                     width="140"
+                     height="280"
+                     class="mcnImage"
+                     style="max-width: 140px;
+                            outline: none;
+                            border: 0;
+                            text-decoration: none;
+                            -ms-interpolation-mode: bicubic;
+                            vertical-align: bottom;">
               </a>
             </td>
           </tr>
