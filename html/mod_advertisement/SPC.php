@@ -96,6 +96,8 @@ foreach($configuration as $zone_name=>$config) {
             <tbody class="mcnImageBlockOuter">
               <tr>
                 <td valign="top"
+                    height="50"
+                    width="300"
                     class="mcnImageBlockInner"
                     style="mso-table-lspace: 0pt;
                            mso-table-rspace: 0pt;
@@ -146,6 +148,8 @@ foreach($configuration as $zone_name=>$config) {
             <tbody class="mcnImageBlockOuter">
               <tr>
                 <td valign="top"
+                    height="50"
+                    width="300"
                     class="mcnImageBlockInner"
                     style="mso-table-lspace: 0pt;
                            mso-table-rspace: 0pt;
@@ -197,6 +201,7 @@ foreach($configuration as $zone_name=>$config) {
           <tr>
             <td valign="top"
                 width="150"
+                height="280"
                 style="mso-table-lspace: 0pt;
                        mso-table-rspace: 0pt;
                        -ms-text-size-adjust: 100%;
@@ -218,6 +223,7 @@ foreach($configuration as $zone_name=>$config) {
             </td>
             <td align="right"
                 width="150"
+                height="280"
                 valign="top"
                 style="mso-table-lspace: 0pt;
                        mso-table-rspace: 0pt;

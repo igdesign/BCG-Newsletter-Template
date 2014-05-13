@@ -39,4 +39,4 @@ if (!empty($this->intro_items)) {
     echo $this->loadTemplate('item');
   }
 }
-
+?>

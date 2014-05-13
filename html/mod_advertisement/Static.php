@@ -77,10 +77,12 @@ foreach($configuration as $zone_name=>$config) {
       	 --><img src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>"
       	         border="0"
       	         width="<?=$width?>"
-      	         height="100%"
+      	         height="<?=$height?>"
       	         style="padding-bottom: 0;
       	                display: inline !important;
       	                vertical-align: bottom;
+      	                max-width: 100%;
+      	                height: auto !important;
       	                border: 0;
       	                outline: none;
       	                text-decoration: none;

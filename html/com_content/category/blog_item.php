@@ -30,57 +30,21 @@ else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
 }
 
 ?>
-<?php /*
-<!-- Leading -->
-<table width="418"
-       class="mcnTextContentContainer"
-       cellpadding="0"
-       cellspacing="0"
-       border="0">
-  <tbody>
-    <tr>
-      <td rowspan="2"
-          valign="top"
-          width="128">
-        <?php if (isset($img_src)) : ?>
-           <img <?= $cssImg ?>
-                src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
-                alt="<?= htmlspecialchars($img_alt); ?>"
-                width="128"
-                height="77" />
-        <?php endif; ?>
-
-      </td>
-      <td width="5"
-          rowspan="2">
-
-      </td>
-    </tr>
-
-    <tr>
-      <td align="left">
-        <?= $cssFontTitle ?><?= htmlentities($this->item->title); ?><?= $cssFontTitleEnd ?>
-        <?= $cssFont ?><?= strip_tags($this->item->introtext, '<a>'); ?><?= $cssFontEnd ?>
-
-      </td>
-    </tr>
-  </tbody>
-</table> <!-- /leading -->
-<table>
-  <tr>
-    <td height="10"></td>
-  </tr>
-</table> */ ?>
-
 
 <table width="418"
        class="mcnTextContentContainer"
        cellpadding="0"
        cellspacing="0"
        border="0"
-       align="left" >
+       valign="top"
+       style="border-collapse: collapse;
+              mso-table-lspace: 0pt;
+              mso-table-rspace: 0pt;
+              -ms-text-size-adjust: 100%;
+              -webkit-text-size-adjust: 100%;">
     <tr>
-      <td align="left">
+      <td align="left"
+          valign="top">
 
 
           <table width="128"
@@ -88,25 +52,31 @@ else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
                  cellspacing="0"
                  border="0"
                  class="mcnTextContentContainer"
-                 align="left">
+                 align="left"
+                 valign="top">
             <tr>
-              <td >
+              <td align="left"
+                  valign="top">
+
                 <?php if (isset($img_src)) : ?>
-                   <img <?= $cssImg ?>
-                        src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
-                        alt="<?= htmlspecialchars($img_alt); ?>"
-                        width="100%"
-                        class="mcnImage" />
+                <img src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
+                     width="128"
+                     height="72"
+                     alt="<?= htmlspecialchars($img_alt); ?>"
+                     align="center"
+                     alt=""
+                     class="mcnImage"
+                     style="max-width: 418px !important;
+                            height: auto !important;
+                            display: inline !important;
+                            vertical-align: bottom;
+                            border: 0;
+                            outline: none;
+                            text-decoration: none;
+                            -ms-interpolation-mode: bicubic;" />
                 <?php endif; ?>
 
-              </td>
-            </tr>
-          </table>
 
-
-          <table width="10" height="10" align="left">
-            <tr>
-              <td align="left">
               </td>
             </tr>
           </table>
@@ -116,9 +86,10 @@ else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
                  cellpadding="0"
                  cellspacing="0"
                  border="0"
-                 class="mcnTextContentContainer">
+                 class="mcnTextContentContainer"
+                 align="right">
             <tr>
-              <td>
+              <td valign="top" align="left">
                 <?= $cssFontTitle ?><?= htmlentities($this->item->title); ?><?= $cssFontTitleEnd ?><br />
                 <?= $cssFont ?><?= strip_tags($this->item->introtext, '<a>'); ?><?= $cssFontEnd ?>
 
@@ -130,9 +101,9 @@ else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
       </td>
     </tr>
 </table>
-<table width="10" height="10" align="left">
+<table width="10" height="10" valign="top" align="left">
     <tr>
-      <td align="left">
+      <td align="left" valign="top" >
       </td>
     </tr>
   </table>

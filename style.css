@@ -1,24 +1,24 @@
 body,#bodyTable,#bodyCell{
 			height:100% !important;
-			margin:0;
-			padding:0;
+			margin:0px;
+			padding:0px;
 			width:100% !important;
 		}
 		table{
 			border-collapse:collapse;
 		}
 		img,a img{
-			border:0;
+			border:0px;
 			outline:none;
 			text-decoration:none;
 		}
 		h1,h2,h3,h4,h5,h6{
-			margin:0;
-			padding:0;
+			margin:0px;
+			padding:0px;
 		}
 		p{
-			margin:1em 0;
-			padding:0;
+			margin:1em 0px;
+			padding:0px;
 		}
 		a{
 			word-wrap:break-word;
@@ -37,7 +37,7 @@ body,#bodyTable,#bodyCell{
 			mso-table-rspace:0pt;
 		}
 		#outlook a{
-			padding:0;
+			padding:0px;
 		}
 		img{
 			-ms-interpolation-mode:bicubic;
@@ -59,10 +59,10 @@ body,#bodyTable,#bodyCell{
 			background-color:#e0edd5;
 		}
 		#bodyCell{
-			border-top:0;
+			border-top:0px;
 		}
 		#templateContainer{
-			border:0;
+			border:0px;
 		}
 		h1{
 			color:#222222 !important;
@@ -73,7 +73,7 @@ body,#bodyTable,#bodyCell{
 			font-weight:bold;
 			line-height:125%;
 			letter-spacing:-1px;
-			margin:0;
+			margin:0px;
 			text-align:left;
 		}
 		h2{
@@ -85,7 +85,7 @@ body,#bodyTable,#bodyCell{
 			font-weight:bold;
 			line-height:125%;
 			letter-spacing:-.75px;
-			margin:0;
+			margin:0px;
 			text-align:left;
 		}
 		h3{
@@ -97,7 +97,7 @@ body,#bodyTable,#bodyCell{
 			font-weight:normal;
 			line-height:125%;
 			letter-spacing:-1px;
-			margin:0;
+			margin:0px;
 			text-align:left;
 		}
 		h4{
@@ -109,33 +109,33 @@ body,#bodyTable,#bodyCell{
 			font-weight:bold;
 			line-height:125%;
 			letter-spacing:normal;
-			margin:0;
+			margin:0px;
 			text-align:left;
 		}
 		#templatePreheader{
 			background-color:#FFFFFF;
-			border-top:0;
-			border-bottom:0;
+			border-top:0px;
+			border-bottom:0px;
 		}
 		.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{
-			color:#606060;
+			color:#606060px;
 			font-family:Helvetica;
 			font-size:11px;
 			line-height:125%;
 			text-align:left;
 		}
 		.preheaderContainer .mcnTextContent a{
-			color:#606060;
+			color:#606060px;
 			font-weight:normal;
 			text-decoration:underline;
 		}
 		#templateHeader{
 			background-color:#FFFFFF;
-			border-top:0;
-			border-bottom:0;
+			border-top:0px;
+			border-bottom:0px;
 		}
 		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
-			color:#606060;
+			color:#606060px;
 			font-family:Helvetica;
 			font-size:15px;
 			line-height:150%;
@@ -148,11 +148,11 @@ body,#bodyTable,#bodyCell{
 		}
 		#templateBody{
 			background-color:#FFFFFF;
-			border-top:0;
-			border-bottom:0;
+			border-top:0px;
+			border-bottom:0px;
 		}
 		#templateSidebar{
-			border-left:0;
+			border-left:0px;
 		}
 		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
 			color:#222222;
@@ -170,10 +170,10 @@ body,#bodyTable,#bodyCell{
 			background-color:#FFFFFF;
 		}
 		#templateSidebarInner{
-			border-left:0;
+			border-left:0px;
 		}
 		.sidebarContainer .mcnTextContent,.sidebarContainer .mcnTextContent p{
-			color:#606060;
+			color:#606060px;
 			font-family:Helvetica;
 			font-size:13px;
 			line-height:125%;
@@ -186,18 +186,18 @@ body,#bodyTable,#bodyCell{
 		}
 		#templateFooter{
 			background-color:#FFFFFF;
-			border-top:0;
-			border-bottom:0;
+			border-top:0px;
+			border-bottom:0px;
 		}
 		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
-			color:#606060;
+			color:#606060px;
 			font-family:Helvetica;
 			font-size:11px;
 			line-height:125%;
 			text-align:left;
 		}
 		.footerContainer .mcnTextContent a{
-			color:#606060;
+			color:#606060px;
 			font-weight:normal;
 			text-decoration:underline;
 		}

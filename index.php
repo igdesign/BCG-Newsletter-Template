@@ -79,7 +79,7 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                  border="0"
                  cellpadding="5"
                  cellspacing="0"
-                 width="728"
+                 width="738"
                  id="templateContainer"
                  style="border-collapse: collapse;
                         mso-table-lspace: 0pt;
@@ -90,13 +90,13 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
 
             <!-- BEGIN PREHEADER // -->
             <tr>
-              <td colspan="2"
+              <td
                   align="center"
                   valign="top"
                   style="mso-table-lspace: 0pt;
-                  mso-table-rspace: 0pt;
-                  -ms-text-size-adjust: 100%;
-                  -webkit-text-size-adjust: 100%;">
+                         mso-table-rspace: 0pt;
+                         -ms-text-size-adjust: 100%;
+                         -webkit-text-size-adjust: 100%;">
 
                 <?php include 'index_preheader.php'; ?>
               </td>
@@ -107,7 +107,7 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
 
             <!-- BEGIN HEADER // -->
             <tr>
-              <td colspan="2"
+              <td
                   align="center"
                   valign="top"
                   style="mso-table-lspace: 0pt;
@@ -124,7 +124,8 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
 
             <!-- CONTENT -->
             <tr>
-              <td>
+              <td valign="top"
+                  align="left">
 
                 <!-- LEFT COLUMN -->
                 <table border="0"
@@ -132,6 +133,7 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                        cellpadding="0"
                        cellspacing="0"
                        align="left"
+                       valign="top"
                        class="mcnCaptionTopContent"
                        style="border-collapse: collapse;
                               mso-table-lspace: 0pt;
@@ -158,6 +160,7 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                                     -webkit-text-size-adjust: 100%;">
                         <tr>
                           <td valign="top"
+                              align="left"
                               class="bodyContainer"
                               style="mso-table-lspace: 0pt;
                                      mso-table-rspace: 0pt;
@@ -168,7 +171,7 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                             <table border="0"
                                    width="418"
                                    class="mcnCaptionTopContent"
-                                   cellpadding="5"
+                                   cellpadding="0"
                                    cellspacing="0"
                                    style="border-collapse: collapse;
                                           mso-table-lspace: 0pt;
@@ -186,6 +189,8 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                                    width="418"
                                    cellpadding="0"
                                    cellspacing="0"
+                                   valign="top"
+                                   align="left"
                                    class="mcnCaptionTopContent"
                                    style="border-collapse: collapse;
                                           mso-table-lspace: 0pt;
@@ -195,6 +200,7 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                               <tbody class="mcnTextBlockOuter">
                                 <tr>
                                   <td valign="top"
+                                      align="left"
                                       class="mcnTextBlockInner"
                                       style="mso-table-lspace: 0pt;
                                              mso-table-rspace: 0pt;
@@ -220,26 +226,9 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                 </table>
                 <!-- /LEFT COLUMN -->
 
-                <!-- Spacer -->
-                <table align="left"
-                       border="0"
-                       width="10"
-                       cellpadding="0"
-                       cellspacing="0"
-                       class="mcnCaptionTopContent"
-                       style="border-collapse: collapse;
-                              mso-table-lspace: 0pt;
-                              mso-table-rspace: 0pt;
-                             -ms-text-size-adjust: 100%;
-                           -webkit-text-size-adjust: 100%;">
-                  <tr>
-                    <td width="10">&nbsp;</td>
-                  </tr>
-                </table>
-                <!-- /SPACER -->
-
                 <!-- RIGHT COLUMN -->
-                <table align="left"
+                <table align="right"
+                       valign="top"
                        border="0"
                        width="300"
                        cellpadding="0"
@@ -254,7 +243,7 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
 
                    <td align="left"
                        valign="top"
-                       width="300"
+
                        class="sectionContainer"
                        style="mso-table-lspace: 0pt;
                               mso-table-rspace: 0pt;
@@ -263,14 +252,14 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
                     <table border="0"
                           cellpadding="0"
                           cellspacing="0"
-                          width="100%"
+                          width="300"
                           id="templateSidebarInner"
                           style="border-collapse: collapse;
-                          mso-table-lspace: 0pt;
-                          mso-table-rspace: 0pt;
-                          -ms-text-size-adjust: 100%;
-                          -webkit-text-size-adjust: 100%;
-                          border-left: 0;">
+                                 mso-table-lspace: 0pt;
+                                 mso-table-rspace: 0pt;
+                                 -ms-text-size-adjust: 100%;
+                                 -webkit-text-size-adjust: 100%;
+                                 border-left: 0;">
                       <tr>
                         <td valign="top"
                             class="sidebarContainer"
@@ -290,12 +279,48 @@ $template = 'http://britishcolumbiagolf.org/templates/'.$this->template;
               </td>
               <!-- /RIGHT COLUMN -->
 
+              <!--
+<table width="418"
+                     border="0"
+                     align="left"
+                     cellpadding="0"
+                     cellspacing="0"
+                     style="border-collapse: collapse;
+                            mso-table-lspace: 0pt;
+                            mso-table-rspace: 0pt;
+                            -ms-text-size-adjust: 100%;
+                            -webkit-text-size-adjust: 100%;
+                            border-left: 0;
+                            border-right: 0;">
+                <tr>
+                  <td>Test</td>
+                </tr>
+              </table>
+
+              <table width="300"
+                     border="0"
+                     align="left"
+                     cellpadding="0"
+                     cellspacing="0"
+                     style="border-collapse: collapse;
+                            mso-table-lspace: 0pt;
+                            mso-table-rspace: 0pt;
+                            -ms-text-size-adjust: 100%;
+                            -webkit-text-size-adjust: 100%;
+                            border-left: 0;
+                            border-right: 0;">
+                <tr>
+                  <td>Right</td>
+                </tr>
+              </table>
+-->
 
             </tr>
             <!-- // END CONTENT -->
 
             <tr>
-              <td colspan="2"
+              <td colspan="1"
+                  border="0"
                   align="center"
                   class="mcnImageContent"
                   valign="top"
