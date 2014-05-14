@@ -22,31 +22,66 @@ $this->item->introtext = str_replace('<a href="/', '<a href="' . str_replace(JUR
 $this->item->introtext = str_replace('<a href="index.php?', '<a href="' . str_replace(JURI::root(true), '', JURI::root()).'index.php?', $this->item->introtext);
 ?>
 
-<!-- Leading -->
-<table  width="418" class="leading  mcnTextContentContainer" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+<!-- BEGIN CAPTION ITEM -->
+<table border="0"
+       cellpadding="0"
+       cellspacing="0"
+       width="100%"
+       class="mcnCaptionBlock">
+  <tbody class="mcnCaptionBlockOuter">
     <tr>
-      <td valign="top" width="418" class="mcnTextContent" style="padding-top: 5px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #222222;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;">
-        <?php
-        if (isset($images->image_intro) and !empty($images->image_intro)) {
-          $img_src = $images->image_intro;
-          $img_alt = $images->image_intro_alt;
-        }
-        else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
-          $img_src = $images->image_fulltext;
-          $img_alt = $images->image_fulltext_alt;
-        }
+      <td class="mcnCaptionBlockInner"
+          valign="top"
+          style="padding: 0;">
+        <table align="left"
+               border="0"
+               cellpadding="0"
+               cellspacing="0"
+               class="mcnCaptionBottomContent"
+               width="false">
+          <tbody>
+            <tr>
+              <td class="mcnCaptionBottomImageContent"
+                  align="left"
+                  valign="top"
+                  style="padding: 0;">
+                <?php
+                if (isset($images->image_intro) and !empty($images->image_intro)) {
+                  $img_src = $images->image_intro;
+                  $img_alt = $images->image_intro_alt;
+                }
+                else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
+                  $img_src = $images->image_fulltext;
+                  $img_alt = $images->image_fulltext_alt;
+                }
 
-        if (isset($img_src)) : ?>
-          <img src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>" width="418"  alt="<?= htmlspecialchars($img_alt); ?>" align="center" alt="" style="max-width: 418px;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage"/>
-        <?php endif; ?>
+                if (isset($img_src)) : ?>
+                  <img alt=""
+                     src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>" width="418"  alt="<?= htmlspecialchars($img_alt); ?>"
+                     width="418"
+                     style="max-width: 853px;"
+                     class="mcnImage">
+                <?php endif; ?>
 
+              </td>
+            </tr>
+            <tr>
+              <td class="mcnTextContent"
+                  valign="top"
+                  style="padding: 0;"
+                  width="418">
+
+                <h1 style="margin: 0;padding: 0;display: block;font-family: Helvetica;font-size: 24px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: -1px;text-align: left;color: #222222 !important;"><?= $this->item->title; ?></h1>
+                <div style="margin: 10px 0 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #222222;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;"><?= strip_tags($this->item->introtext, '<a><br><p>'); ?></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </td>
     </tr>
-    <tr>
-      <td width="418" class="mcnTextContent" style="padding-top: 5px;padding-bottom: 10px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #222222;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;">
-        <h1 style="margin: 0;padding: 0;display: block;font-family: Helvetica;font-size: 24px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: -1px;text-align: left;color: #222222 !important;"><?= $this->item->title; ?></h1>
-        <div style="margin: 10px 0 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #222222;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;"><?= strip_tags($this->item->introtext, '<a><br><p>'); ?></div>
-      </td>
-    </tr>
-</table> <!-- /leading -->
+  </tbody>
+</table>
+<!-- // END CAPTION ITEM -->
 
+<br />

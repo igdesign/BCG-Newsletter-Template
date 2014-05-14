@@ -1,11 +1,6 @@
 <?php // no direct acces
 defined( '_JEXEC' ) or die( 'Restricted access');
 
-
-
-
-
-
 $serverURL = $params->get('serverURL', '');
 $serverURL = preg_replace('#^https?://#', '', rtrim($serverURL,'/'));
 
@@ -72,24 +67,58 @@ foreach($configuration as $zone_name=>$config) {
   // zone id specified
   if (isset($config->banner_id)) {
     $banner_id = $config->banner_id; ?>
-      <a href="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/ck.php?n=<?php echo $n; ?>"
-         target="_blank"><!--
-      	 --><img src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>"
-      	         border="0"
-      	         width="<?=$width?>"
-      	         height="<?=$height?>"
-      	         style="padding-bottom: 0;
-      	                display: inline !important;
-      	                vertical-align: bottom;
-      	                max-width: 100%;
-      	                height: auto !important;
-      	                border: 0;
-      	                outline: none;
-      	                text-decoration: none;
-      	                -ms-interpolation-mode: bicubic;"
-                        class="mcnImage"/><!--
-      --></a>
+      <!-- BEGIN AD BLOCK // -->
+      <table border="0"
+             cellpadding="0"
+             cellspacing="0"
+             width="100%"
+             class="mcnImageBlock">
+        <tbody class="mcnImageBlockOuter">
+          <tr>
+            <td valign="top"
+                style="padding: 0px"
+                class="mcnImageBlockInner">
+              <table align="left"
+                     width="100%"
+                     border="0"
+                     cellpadding="0"
+                     cellspacing="0"
+                     class="mcnImageContentContainer">
+                <tbody>
+                  <tr>
+                    <td class="mcnImageContent"
+                        valign="top"
+                        style="padding-right: 0px;
+                               padding-left: 0px;
+                               padding-top: 0;
+                               padding-bottom: 0;
+                               text-align: center;">
+                      <a href="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/ck.php?n=<?php echo $n; ?>"
+                         target="_blank"
+                         style="border: 0;">
+                        <img align="center"
+                             alt=""
+                             src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>"
+                             width="<?=$width?>"
+                  	         height="<?=$height?>"
+                             style="max-width: 100%;
+                                    padding-bottom: 0;
+                                    display: inline !important;
+                                    vertical-align: bottom;
+                                    border:0;"
+                             class="mcnImage">
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- // END AD BLOCK -->
     <?php
   }
 
 }
+?>

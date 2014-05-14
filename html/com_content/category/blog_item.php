@@ -31,80 +31,80 @@ else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
 
 ?>
 
-<table width="418"
-       class="mcnTextContentContainer"
+
+<!-- BEGIN LEFT CAPTION ITEM // -->
+<table border="0"
        cellpadding="0"
        cellspacing="0"
-       border="0"
-       valign="top"
-       style="border-collapse: collapse;
-              mso-table-lspace: 0pt;
-              mso-table-rspace: 0pt;
-              -ms-text-size-adjust: 100%;
-              -webkit-text-size-adjust: 100%;">
+       width="100%"
+       class="mcnCaptionBlock">
+  <tbody class="mcnCaptionBlockOuter">
     <tr>
-      <td align="left"
-          valign="top">
-
-
-          <table width="128"
-                 cellpadding="0"
-                 cellspacing="0"
-                 border="0"
-                 class="mcnTextContentContainer"
-                 align="left"
-                 valign="top">
+      <td class="mcnCaptionBlockInner"
+          valign="top"
+          style="padding: 0;
+                 padding-right: 0;">
+        <table border="0"
+               cellpadding="0"
+               cellspacing="0"
+               class="mcnCaptionRightContentOuter"
+               width="100%">
+          <tbody>
             <tr>
-              <td align="left"
-                  valign="top">
+              <td valign="top"
+                  class="mcnCaptionRightContentInner"
+                  style="padding: 0 0 ;">
+                <table align="left"
+                       border="0"
+                       cellpadding="0"
+                       cellspacing="0"
+                       class="mcnCaptionRightImageContentContainer">
+                  <tbody>
+                    <tr>
+                      <td class="mcnCaptionRightImageContent"
+                          valign="top">
 
-                <?php if (isset($img_src)) : ?>
-                <img src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
-                     width="128"
-                     height="72"
-                     alt="<?= htmlspecialchars($img_alt); ?>"
-                     align="center"
-                     alt=""
-                     class="mcnImage"
-                     style="max-width: 418px !important;
-                            height: auto !important;
-                            display: inline !important;
-                            vertical-align: bottom;
-                            border: 0;
-                            outline: none;
-                            text-decoration: none;
-                            -ms-interpolation-mode: bicubic;" />
-                <?php endif; ?>
+                        <?php if (isset($img_src)) : ?>
+                        <img alt="<?= htmlspecialchars($img_alt); ?>"
+                             src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
+                             width="128"
+                             height="72"
+                             style="max-width: 418px !important;"
+                             class="mcnImage">
+                        <?php endif; ?>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="mcnCaptionRightTextContentContainer"
+                       align="right"
+                       border="0"
+                       cellpadding="0"
+                       cellspacing="0"
+                       width="290">
+                  <tbody>
+                    <tr>
+                      <td valign="top"
+                          class="mcnTextContent"
+                          style="text-align: left;
+                                 padding-left: 9px;">
 
 
+                        <h4 style="margin: 0;padding: 0;display: block;font-family: Helvetica;font-size: 14px;font-style: normal;font-weight: bold; letter-spacing: 0px;text-align: left;color: #222222 !important;"><?= htmlentities($this->item->title); ?><?= $cssFontTitleEnd ?></h4>
+                        <div style="margin: 10px 0 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #222222;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;"><?= strip_tags($this->item->introtext, '<a>'); ?></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </td>
             </tr>
-          </table>
-
-
-          <table width="280"
-                 cellpadding="0"
-                 cellspacing="0"
-                 border="0"
-                 class="mcnTextContentContainer"
-                 align="right">
-            <tr>
-              <td valign="top" align="left">
-                <?= $cssFontTitle ?><?= htmlentities($this->item->title); ?><?= $cssFontTitleEnd ?><br />
-                <?= $cssFont ?><?= strip_tags($this->item->introtext, '<a>'); ?><?= $cssFontEnd ?>
-
-              </td>
-            </tr>
-          </table>
-
-
+          </tbody>
+        </table>
       </td>
     </tr>
+  </tbody>
 </table>
-<table width="10" height="10" valign="top" align="left">
-    <tr>
-      <td align="left" valign="top" >
-      </td>
-    </tr>
-  </table>
+<!-- // END LEFT CAPTION ITEM -->
 
+<br />

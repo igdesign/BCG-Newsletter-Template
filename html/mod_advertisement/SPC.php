@@ -82,49 +82,56 @@ foreach($configuration as $zone_name=>$config) {
       $src  = 'http://'.$serverURL.'/'.$deliveryPath.'/avw.php?bannerid='.trim($bannerid).'&amp;cb='.$n;
 
 			$ads_ready[] =
-				 '<!-- ADVERTISEMENT -->
+				 '<!-- BEGIN AD BLOCK // -->
           <table border="0"
                  cellpadding="0"
                  cellspacing="0"
                  width="100%"
-                 class="mcnImageBlock"
-                 style="border-collapse: collapse;
-                        mso-table-lspace: 0pt;
-                        mso-table-rspace: 0pt;
-                        -ms-text-size-adjust: 100%;
-                        -webkit-text-size-adjust: 100%;">
+                 class="mcnImageBlock">
             <tbody class="mcnImageBlockOuter">
               <tr>
                 <td valign="top"
-                    height="50"
-                    width="300"
-                    class="mcnImageBlockInner"
-                    style="mso-table-lspace: 0pt;
-                           mso-table-rspace: 0pt;
-                           -ms-text-size-adjust: 100%;
-                           -webkit-text-size-adjust: 100%;">
-                  <a href="'.$href.'"
-                     target="_blank">
-                    <img align="left"
-                         alt=""
-                         src="'.$src.'"
-                         width="300"
-                         heigth="250"
-                         class="mcnImage"
-                         style="max-width: 300px;
-                                padding-bottom: 0;
-                                display: inline !important;
-                                vertical-align: bottom;
-                                border: 0;
-                                outline: none;
-                                text-decoration: none;
-                                -ms-interpolation-mode: bicubic;">
-                  </a>
+                    style="padding: 0px"
+                    class="mcnImageBlockInner">
+                  <table align="left"
+                         width="100%"
+                         border="0"
+                         cellpadding="0"
+                         cellspacing="0"
+                         class="mcnImageContentContainer">
+                    <tbody>
+                      <tr>
+                        <td class="mcnImageContent"
+                            valign="top"
+                            style="padding-right: 0px;
+                                   padding-left: 0px;
+                                   padding-top: 0;
+                                   padding-bottom: 0;
+                                   text-align: center;">
+                          <a href="'.$href.'"
+                             target="_blank"
+                             style="border: 0;">
+                            <img align="center"
+                                 alt=""
+                                 src="'.$src.'"
+                                 width="300"
+                                 heigth="250"
+                                 style="max-width: 300px;
+                                        padding-bottom: 0;
+                                        display: inline !important;
+                                        vertical-align: bottom;
+                                        border: 0;"
+                                 class="mcnImage">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </td>
               </tr>
             </tbody>
           </table>
-          <!-- /ADVERTISEMENT -->';
+          <!-- // END AD BLOCK -->';
 			break;
 
 		case 'e':
@@ -134,49 +141,56 @@ foreach($configuration as $zone_name=>$config) {
       $src  = 'http://'.$serverURL.'/'.$deliveryPath.'/avw.php?bannerid='.trim($bannerid).'&amp;cb='.$n;
 
 			$ads_ready[] =
-				 '<!-- ADVERTISEMENT -->
+				 '<!-- BEGIN AD BLOCK // -->
           <table border="0"
                  cellpadding="0"
                  cellspacing="0"
                  width="100%"
-                 class="mcnImageBlock"
-                 style="border-collapse: collapse;
-                        mso-table-lspace: 0pt;
-                        mso-table-rspace: 0pt;
-                        -ms-text-size-adjust: 100%;
-                        -webkit-text-size-adjust: 100%;">
+                 class="mcnImageBlock">
             <tbody class="mcnImageBlockOuter">
               <tr>
                 <td valign="top"
-                    height="50"
-                    width="300"
-                    class="mcnImageBlockInner"
-                    style="mso-table-lspace: 0pt;
-                           mso-table-rspace: 0pt;
-                           -ms-text-size-adjust: 100%;
-                           -webkit-text-size-adjust: 100%;">
-                  <a href="'.$href.'"
-                     target="_blank">
-                    <img align="left"
-                         alt=""
-                         src="'.$src.'"
-                         width="300"
-                         height="50"
-                         class="mcnImage"
-                         style="max-width: 300px;
-                                padding-bottom: 0;
-                                display: inline !important;
-                                vertical-align: bottom;
-                                border: 0;
-                                outline: none;
-                                text-decoration: none;
-                                -ms-interpolation-mode: bicubic;">
-                  </a>
+                    style="padding: 0px"
+                    class="mcnImageBlockInner">
+                  <table align="left"
+                         width="100%"
+                         border="0"
+                         cellpadding="0"
+                         cellspacing="0"
+                         class="mcnImageContentContainer">
+                    <tbody>
+                      <tr>
+                        <td class="mcnImageContent"
+                            valign="top"
+                            style="padding-right: 0px;
+                                   padding-left: 0px;
+                                   padding-top: 0;
+                                   padding-bottom: 0;
+                                   text-align: center;">
+                          <a href="'.$href.'"
+                             target="_blank"
+                             style="border: 0;">
+                            <img align="center"
+                                 alt=""
+                                 src="'.$src.'"
+                                 width="300"
+                                 heigth="50"
+                                 style="max-width: 300px;
+                                        padding-bottom: 0;
+                                        display: inline !important;
+                                        vertical-align: bottom;
+                                        border: 0"
+                                 class="mcnImage">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </td>
               </tr>
             </tbody>
           </table>
-          <!-- /ADVERTISEMENT -->';
+          <!-- // END AD BLOCK -->';
 			break;
 
 		case 'd':
@@ -187,66 +201,95 @@ foreach($configuration as $zone_name=>$config) {
       $src2  = 'http://'.$serverURL.'/'.$deliveryPath.'/avw.php?bannerid='.trim($config->id2).'&amp;cb='.$n;
 
 			$ads_ready[] =
-				'<!-- /ADVERTISEMENT -->
-				 <table border="0"
-				        cellpadding="0"
-				        cellspacing="0"
-				        class="mcnImageGroupBlock"
-				        style="border-collapse: collapse;
-				               mso-table-lspace: 0pt;
-				               mso-table-rspace: 0pt;
-				               -ms-text-size-adjust: 100%;
-				               -webkit-text-size-adjust: 100%;">
+				'<!-- BEGIN AD BLOCK // -->
+          <table border="0"
+                 cellpadding="0"
+                 cellspacing="0"
+                 width="100%"
+                 class="mcnImageBlock">
+            <tbody class="mcnImageBlockOuter">
+              <tr>
+                <td valign="top"
+                    style="padding: 0px"
+                    class="mcnImageBlockInner">
+                  <table align="left"
+                         width="100%"
+                         border="0"
+                         cellpadding="0"
+                         cellspacing="0"
+                         class="mcnImageContentContainer">
+                    <tbody>
+                      <tr>
+                        <td class="mcnImageContent"
+                            valign="top"
+                            style="padding-right: 0px;
+                                   padding-left: 0px;
+                                   padding-top: 0;
+                                   padding-bottom: 0;
+                                   text-align: center;">
+                          <a href="'.$href1.'"
+                             target="_blank"
+                             style="border: 0;">
+                            <img align="center"
+                                 alt=""
+                                 src="'.$src1.'"
+                                 width="140"
+                                 heigth="240"
+                                 style="max-width: 140px;
+                                        padding-bottom: 0;
+                                        display: inline !important;
+                                        vertical-align: bottom;
+                                        border="0""
+                                 class="mcnImage">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
 
-          <tr>
-            <td valign="top"
-                width="150"
-                height="280"
-                style="mso-table-lspace: 0pt;
-                       mso-table-rspace: 0pt;
-                       -ms-text-size-adjust: 100%;
-                       -webkit-text-size-adjust: 100%;">
-              <a href="'.$href1.'"
-                 target="_blank">
-                <img alt=""
-                     src="'.$src1.'"
-                     width="140"
-                     height="280"
-                     class="mcnImage"
-                     style="max-width: 140px;
-                            outline: none;
-                            border: 0;
-                            text-decoration: none;
-                            -ms-interpolation-mode: bicubic;
-                            vertical-align: bottom;">
-              </a>
-            </td>
-            <td align="right"
-                width="150"
-                height="280"
-                valign="top"
-                style="mso-table-lspace: 0pt;
-                       mso-table-rspace: 0pt;
-                       -ms-text-size-adjust: 100%;
-                       -webkit-text-size-adjust: 100%;">
-              <a href="'.$href2.'"
-                 target="_blank">
-                <img alt=""
-                     src="'.$src2.'"
-                     width="140"
-                     height="280"
-                     class="mcnImage"
-                     style="max-width: 140px;
-                            outline: none;
-                            border: 0;
-                            text-decoration: none;
-                            -ms-interpolation-mode: bicubic;
-                            vertical-align: bottom;">
-              </a>
-            </td>
-          </tr>
-        </table>
-        <!-- /ADVERTISEMENT -->';
+                <td valign="top"
+                    style="padding: 0px"
+                    class="mcnImageBlockInner">
+                  <table align="left"
+                         width="100%"
+                         border="0"
+                         cellpadding="0"
+                         cellspacing="0"
+                         class="mcnImageContentContainer">
+                    <tbody>
+                      <tr>
+                        <td class="mcnImageContent"
+                            valign="top"
+                            style="padding-right: 0px;
+                                   padding-left: 0px;
+                                   padding-top: 0;
+                                   padding-bottom: 0;
+                                   text-align: center;">
+                          <a href="'.$href2.'"
+                             target="_blank"
+                             style="border: 0;">
+                            <img align="center"
+                                 alt=""
+                                 src="'.$src2.'"
+                                 width="140"
+                                 heigth="240"
+                                 style="max-width: 140px;
+                                        padding-bottom: 0;
+                                        display: inline !important;
+                                        vertical-align: bottom;
+                                        border: 0;"
+                                 class="mcnImage">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- // END AD BLOCK -->';
 			break;
 
 		default:
