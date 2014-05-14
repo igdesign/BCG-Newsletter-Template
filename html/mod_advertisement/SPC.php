@@ -115,7 +115,6 @@ foreach($configuration as $zone_name=>$config) {
                                  alt=""
                                  src="'.$src.'"
                                  width="300"
-                                 heigth="250"
                                  style="max-width: 300px;
                                         padding-bottom: 0;
                                         display: inline !important;
@@ -174,7 +173,6 @@ foreach($configuration as $zone_name=>$config) {
                                  alt=""
                                  src="'.$src.'"
                                  width="300"
-                                 heigth="50"
                                  style="max-width: 300px;
                                         padding-bottom: 0;
                                         display: inline !important;
@@ -234,7 +232,6 @@ foreach($configuration as $zone_name=>$config) {
                                  alt=""
                                  src="'.$src1.'"
                                  width="140"
-                                 heigth="240"
                                  style="max-width: 140px;
                                         padding-bottom: 0;
                                         display: inline !important;
@@ -273,7 +270,6 @@ foreach($configuration as $zone_name=>$config) {
                                  alt=""
                                  src="'.$src2.'"
                                  width="140"
-                                 heigth="240"
                                  style="max-width: 140px;
                                         padding-bottom: 0;
                                         display: inline !important;

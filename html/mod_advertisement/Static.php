@@ -100,7 +100,6 @@ foreach($configuration as $zone_name=>$config) {
                              alt=""
                              src="http://<?php echo $serverURL; ?>/<?php echo $deliveryPath; ?>/avw.php?bannerid=<?php echo $banner_id; ?>&amp;n=<?php echo $n; ?>"
                              width="<?=$width?>"
-                  	         height="<?=$height?>"
                              style="max-width: 100%;
                                     padding-bottom: 0;
                                     display: inline !important;

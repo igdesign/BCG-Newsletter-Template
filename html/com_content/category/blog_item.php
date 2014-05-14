@@ -68,7 +68,6 @@ else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
                         <img alt="<?= htmlspecialchars($img_alt); ?>"
                              src="<?= 'http://britishcolumbiagolf.org/'.htmlspecialchars($img_src); ?>"
                              width="128"
-                             height="72"
                              style="max-width: 418px !important;"
                              class="mcnImage">
                         <?php endif; ?>
@@ -82,7 +81,7 @@ else if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
                        border="0"
                        cellpadding="0"
                        cellspacing="0"
-                       width="290">
+                       width="281">
                   <tbody>
                     <tr>
                       <td valign="top"

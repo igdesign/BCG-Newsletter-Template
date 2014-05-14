@@ -9,49 +9,6 @@
 
 defined('_JEXEC') or die; ?>
 
-<table border="0"
-       cellpadding="0"
-       cellspacing="0"
-       width="100%"
-       class="mcnFollowBlock">
-
-  <tbody class="mcnFollowBlockOuter">
-    <tr>
-      <td align="center"
-          valign="top"
-          style="padding: 0"
-          class="mcnFollowBlockInner">
-
-        <table border="0"
-               cellpadding="0"
-               cellspacing="0"
-               width="100%"
-               class="mcnFollowContentContainer">
-          <tbody>
-            <tr>
-              <td align="center"
-                  style="padding-left: 0;
-                         padding-right: 0;">
-                <table border="0"
-                       cellpadding="0"
-                       cellspacing="0"
-                       class="mcnFollowContent"
-                       width="100%"
-                       style="background-color: #5d9732;">
-                  <tbody>
-                    <tr>
-                      <td align="center"
-                          valign="top"
-                          style="padding-top: 0;
-                                 padding-right: 0;
-                                 padding-left: 0;">
-                        <table border="0"
-                               cellpadding="0"
-                               cellspacing="0"
-                               width="100%">
-                          <tbody>
-                            <tr>
-                              <td valign="top">
 
 <?php foreach ($list as $i => &$item) {
 switch ($item->type) {
@@ -68,20 +25,3 @@ switch ($item->type) {
   }
 }
 ?>
-
-</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
