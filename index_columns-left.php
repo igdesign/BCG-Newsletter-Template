@@ -22,6 +22,9 @@
         <tr>
           <jdoc:include type="modules" name="newsletter-content" style="none" />
         </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
       </table>
       <!-- // END SECTION MENU -->
 

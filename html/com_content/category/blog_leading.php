@@ -73,7 +73,7 @@ $this->item->introtext = str_replace('<a href="index.php?', '<a href="' . str_re
                   width="418">
 
                 <h1 style="margin: 0;padding: 0;display: block;font-family: Helvetica;font-size: 24px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: -1px;text-align: left;color: #222222 !important;"><?= $this->item->title; ?></h1>
-                <div style="margin: 10px 0 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #222222;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;"><?= strip_tags($this->item->introtext, '<a><br><p>'); ?></div>
+                <div style="margin: 10px 0 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #222222;font-family: Helvetica;font-size: 14px;line-height: 150%;text-align: left;"><?= strip_tags($this->item->introtext, '<a><br><p><img><hr><table><tr><td><h2><h1><font><span>'); ?></div>
               </td>
             </tr>
           </tbody>
